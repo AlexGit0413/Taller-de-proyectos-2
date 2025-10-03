@@ -77,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-
         btnLogin.setOnClickListener(v -> loginUser());
         btnRegister.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, Registro.class);
