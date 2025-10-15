@@ -46,8 +46,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="8dp" />
 
-            <!-- Reutilizable: todos los TextInputLayouts -->
-            <!-- Nombre -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/nombreLayout"
                 style="@style/MyTextInputStyle"
@@ -70,7 +68,6 @@
                     android:textColor="#000000" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Apellido -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/apellidoLayout"
                 style="@style/MyTextInputStyle"
@@ -91,7 +88,6 @@
                     android:textColor="#000000" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Email -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/emailLayout"
                 style="@style/MyTextInputStyle"
@@ -115,7 +111,6 @@
                     android:textColor="#000000" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Contraseña -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/passLayout"
                 style="@style/MyTextInputStyle"
@@ -151,7 +146,6 @@
                     android:src="@drawable/visibility_off" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Celular -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/celularLayout"
                 style="@style/MyTextInputStyle"
@@ -175,7 +169,6 @@
                     android:textColor="#000000" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Tipo de documento -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/documentoTipoLayout"
                 style="@style/MyTextInputStyle"
@@ -198,7 +191,6 @@
                     android:theme="@style/ThemeOverlay.AppCompat.Light" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- DNI -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/dniLayout"
                 android:layout_width="0dp"
@@ -221,7 +213,6 @@
                     android:textColor="#000000" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Pasaporte -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/pasaporteLayout"
                 android:layout_width="0dp"
