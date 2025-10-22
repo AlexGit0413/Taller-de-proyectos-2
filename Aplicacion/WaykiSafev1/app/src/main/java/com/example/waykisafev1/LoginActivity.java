@@ -49,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     // Metodo para login en Firebase
+
     private void loginUser(String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
