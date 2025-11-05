@@ -19,6 +19,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -46,6 +47,10 @@ public class Registro extends AppCompatActivity {
         // Inicializar Firebase Auth y Firestore
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
+        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
+                .setPersistenceEnabled(true) // Activa persistencia offline
+                .build();
+        db.setFirestoreSettings(settings);
 
         // Inicializar vistas
         editTextNombre = findViewById(R.id.editTextNombre);
