@@ -8,7 +8,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
-import android.view.WindowManager;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,7 +24,8 @@ import com.google.android.gms.maps.model.*;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -62,8 +62,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
 
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this,
@@ -72,54 +70,45 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             return;
         }
 
-        mMap.getUiSettings().setMyLocationButtonEnabled(true); // Elimina el botón de mi ubicación
-        mMap.getUiSettings().setZoomControlsEnabled(false); // Elimina los controles de zoom (opcional)
-
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
+        mMap.getUiSettings().setZoomControlsEnabled(false);
         mMap.setMyLocationEnabled(true);
 
-        // Obtener la ubicación actual
+        // Obtener ubicación actual
         fusedLocationClient.getLastLocation()
                 .addOnSuccessListener(this, location -> {
                     if (location != null) {
-
-                        // Obtener las coordenadas de la ubicación del usuario
                         LatLng userLocation = new LatLng(location.getLatitude(), location.getLongitude());
-
-                        // Ajustar el nivel de zoom para mostrar un área más cercana centrada en la ubicación
-                        float zoomLevel = 19.0f; // Ajusta el zoom para acercar más (puedes probar con 18.0f si es necesario)
-
-                        // Mover la cámara al centro de la ubicación del usuario con el zoom adecuado
+                        float zoomLevel = 19.0f;
                         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLocation, zoomLevel));
 
-                        // Agregar marcador para la ubicación del usuario
+                        // Marcador y círculo de ubicación actual
                         mMap.addMarker(new MarkerOptions()
                                 .position(userLocation)
                                 .title("Tu ubicación actual")
-                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ubi))); // Ícono pequeño de ubicación
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ubi)));
 
-                        // Agregar un círculo alrededor de la ubicación del usuario (con un radio pequeño)
                         mMap.addCircle(new CircleOptions()
                                 .center(userLocation)
-                                .radius(8) // Radio pequeño
-                                .strokeColor(Color.GRAY) // Color gris
-                                .fillColor(Color.argb(50, 128, 128, 128))); // Color gris claro
+                                .radius(8)
+                                .strokeColor(Color.GRAY)
+                                .fillColor(Color.argb(50, 128, 128, 128)));
 
-                        // Verificar proximidad a zonas peligrosas
-                        verificarProximidad(userLocation);
+                        // Verificar proximidad y registrar incidentes automáticamente
+                        verificarProximidadYRegistrar(userLocation);
                     } else {
                         Toast.makeText(this, "No se pudo obtener la ubicación actual", Toast.LENGTH_SHORT).show();
                     }
                 });
 
-        // Cargar zonas peligrosas (si las hay)
+        // Cargar zonas peligrosas
         cargarZonasPeligrosas();
     }
 
+    // Función para registrar incidentes automáticamente si el usuario está cerca de cualquier zona peligrosa
+    private void verificarProximidadYRegistrar(LatLng userLocation) {
+        final double RADIUS = 5; // metros
 
-    private void verificarProximidad(LatLng userLocation) {
-        final double RADIUS = 5; // Radio de proximidad en metros (ajustable)
-
-        // Verificar la proximidad con las zonas peligrosas
         firestore.collection("reportes")
                 .get()
                 .addOnSuccessListener(queryDocumentSnapshots -> {
@@ -128,9 +117,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         Double lng = doc.getDouble("longitud");
                         String nivel = doc.getString("nivel_peligro");
 
-                        if (lat == null || lng == null || !"Rojo".equalsIgnoreCase(nivel)) continue;
+                        if (lat == null || lng == null || nivel == null) continue;
 
-                        // Calcular la distancia entre la ubicación del usuario y la zona peligrosa
                         Location userLoc = new Location("user");
                         userLoc.setLatitude(userLocation.latitude);
                         userLoc.setLongitude(userLocation.longitude);
@@ -139,12 +127,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         zoneLoc.setLatitude(lat);
                         zoneLoc.setLongitude(lng);
 
-                        float distance = userLoc.distanceTo(zoneLoc); // Distancia en metros
+                        float distance = userLoc.distanceTo(zoneLoc);
 
-                        // Si el usuario está cerca de una zona peligrosa (menos de 50 metros), muestra una alerta
                         if (distance < RADIUS) {
-                            // Mostrar alerta
-                            Toast.makeText(MapsActivity.this, "¡Estás ingresando a una zona peligrosa! Toma tus precauciones.", Toast.LENGTH_LONG).show();
+                            // Mostrar alerta al usuario
+                            Toast.makeText(MapsActivity.this, "¡Estás ingresando a una zona peligrosa! Se registrará automáticamente el incidente.", Toast.LENGTH_LONG).show();
+
+                            // Registrar incidente automáticamente en Firestore
+                            Map<String, Object> incidente = new HashMap<>();
+                            incidente.put("latitud", userLocation.latitude);
+                            incidente.put("longitud", userLocation.longitude);
+                            incidente.put("nivel_peligro", nivel);
+                            incidente.put("timestamp", System.currentTimeMillis());
+                            incidente.put("tipo", "Automático");
+
+                            firestore.collection("reportes_automaticos")
+                                    .add(incidente)
+                                    .addOnSuccessListener(docRef -> Toast.makeText(this, "Incidente registrado automáticamente", Toast.LENGTH_SHORT).show())
+                                    .addOnFailureListener(e -> Toast.makeText(this, "Error al registrar incidente: " + e.getMessage(), Toast.LENGTH_SHORT).show());
                         }
                     }
                 });
@@ -153,7 +153,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void cargarZonasPeligrosas() {
         final HashMap<String, Boolean> zonasOcupadas = new HashMap<>();
 
-        // Cargar reportes de usuarios
         firestore.collection("reportes")
                 .get()
                 .addOnSuccessListener(queryDocumentSnapshots -> {
@@ -165,17 +164,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         if (lat == null || lng == null || nivel == null) continue;
 
                         LatLng ubicacion = new LatLng(lat, lng);
+                        int colorStroke = nivel.equalsIgnoreCase("Naranja") ? Color.rgb(255, 165, 0) : Color.RED;
+                        int colorFill = nivel.equalsIgnoreCase("Naranja") ? 0x44FFA500 : 0x44FF0000;
 
-                        // Definir colores según nivel de peligro
-                        int colorStroke = Color.RED;
-                        int colorFill = 0x44FF0000; // Rojo transparente
-
-                        if ("Naranja".equalsIgnoreCase(nivel)) {
-                            colorStroke = Color.rgb(255, 165, 0);
-                            colorFill = 0x44FFA500;
-                        }
-
-                        // Agregar círculo y marcador del usuario
                         mMap.addCircle(new CircleOptions()
                                 .center(ubicacion)
                                 .radius(8)
@@ -191,89 +182,36 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                                 BitmapFactory.decodeResource(getResources(), R.drawable.human),
                                                 50, 50, false))));
 
-                        // Marcar la zona como ocupada
                         String key = Math.round(lat * 1000) + "," + Math.round(lng * 1000);
                         zonasOcupadas.put(key, true);
                     }
 
-                    // Luego de cargar zonas de usuario, cargar reportes de IA
-                    firestore.collection("reportes_ia")
-                            .get()
-                            .addOnSuccessListener(queryIA -> {
-                                Map<String, Integer> conteoIA = new HashMap<>();
-                                Map<String, LatLng> ubicacionesIA = new HashMap<>();
-                                Map<String, String> textosIA = new HashMap<>();
+                    // Mostrar zonas verdes alrededor del usuario
+                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                        fusedLocationClient.getLastLocation()
+                                .addOnSuccessListener(location -> {
+                                    if (location != null) {
+                                        double latCentro = location.getLatitude();
+                                        double lonCentro = location.getLongitude();
 
-                                for (QueryDocumentSnapshot doc : queryIA) {
-                                    Double lat = doc.getDouble("lat");
-                                    Double lng = doc.getDouble("lon");
-                                    String texto = doc.getString("texto");
-                                    String nivel = doc.getString("nivel_peligro"); // Obtenemos el nivel desde Firestore
+                                        for (int latOffset = -3; latOffset <= 3; latOffset++) {
+                                            for (int lonOffset = -3; lonOffset <= 3; lonOffset++) {
+                                                double lat = latCentro + (latOffset * 0.0005);
+                                                double lon = lonCentro + (lonOffset * 0.0005);
+                                                String key = Math.round(lat * 1000) + "," + Math.round(lon * 1000);
 
-                                    if (lat == null || lng == null || nivel == null) continue;
-
-                                    String key = Math.round(lat * 1000) + "," + Math.round(lng * 1000);
-                                    ubicacionesIA.put(key, new LatLng(lat, lng));
-                                    textosIA.put(key, texto != null ? texto : "Zona IA reportada");
-                                    zonasOcupadas.put(key, true);
-                                    conteoIA.put(key, 1); // Este valor ya no se usará, pero lo dejamos por compatibilidad
-
-                                    // Ahora, dibujamos inmediatamente el círculo según el nivel
-                                    int colorStroke = Color.RED;
-                                    int colorFill = 0x44FF0000; // Rojo por defecto
-
-                                    if ("Naranja".equalsIgnoreCase(nivel)) {
-                                        colorStroke = Color.rgb(255, 165, 0);
-                                        colorFill = 0x44FFA500;
-                                    }
-
-                                    LatLng ubicacion = new LatLng(lat, lng);
-
-                                    mMap.addCircle(new CircleOptions()
-                                            .center(ubicacion)
-                                            .radius(8)
-                                            .strokeColor(colorStroke)
-                                            .fillColor(colorFill));
-
-                                    mMap.addMarker(new MarkerOptions()
-                                            .position(ubicacion)
-                                            .title("[IA] " + (texto != null ? texto.substring(0, Math.min(30, texto.length())) + "..." : "Zona IA"))
-                                            .snippet("Nivel: " + nivel)
-                                            .icon(BitmapDescriptorFactory.fromBitmap(
-                                                    Bitmap.createScaledBitmap(
-                                                            BitmapFactory.decodeResource(getResources(), R.drawable.ia),
-                                                            50, 50, false))));
-                                }
-
-
-
-                                // Finalmente, mostrar zonas verdes (no reportadas)
-                                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                                    fusedLocationClient.getLastLocation()
-                                            .addOnSuccessListener(location -> {
-                                                if (location != null) {
-                                                    double latCentro = location.getLatitude();
-                                                    double lonCentro = location.getLongitude();
-
-                                                    for (int latOffset = -3; latOffset <= 3; latOffset++) {
-                                                        for (int lonOffset = -3; lonOffset <= 3; lonOffset++) {
-                                                            double lat = latCentro + (latOffset * 0.0005);
-                                                            double lon = lonCentro + (lonOffset * 0.0005);
-                                                            String key = Math.round(lat * 1000) + "," + Math.round(lon * 1000);
-
-                                                            if (!zonasOcupadas.containsKey(key)) {
-                                                                LatLng ubicacion = new LatLng(lat, lon);
-                                                                mMap.addGroundOverlay(new GroundOverlayOptions()
-                                                                        .image(BitmapDescriptorFactory.fromResource(R.drawable.verde))
-                                                                        .position(ubicacion, 60f)
-                                                                        .transparency(0.4f));
-                                                            }
-                                                        }
-                                                    }
+                                                if (!zonasOcupadas.containsKey(key)) {
+                                                    LatLng ubicacion = new LatLng(lat, lon);
+                                                    mMap.addGroundOverlay(new GroundOverlayOptions()
+                                                            .image(BitmapDescriptorFactory.fromResource(R.drawable.verde))
+                                                            .position(ubicacion, 60f)
+                                                            .transparency(0.4f));
                                                 }
-                                            });
-                                }
-                            });
+                                            }
+                                        }
+                                    }
+                                });
+                    }
                 });
     }
 }
