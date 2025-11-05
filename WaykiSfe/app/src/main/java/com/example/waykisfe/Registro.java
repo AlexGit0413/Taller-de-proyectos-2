@@ -1,4 +1,4 @@
-package com.example.waykisafe;
+package com.example.waykisfe;
 
 import android.os.Bundle;
 import android.text.TextUtils;

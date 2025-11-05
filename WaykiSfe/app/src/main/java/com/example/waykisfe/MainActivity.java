@@ -1,4 +1,4 @@
-package com.example.waykisafe;
+package com.example.waykisfe;
 
 import android.content.Intent;
 import android.os.Bundle;

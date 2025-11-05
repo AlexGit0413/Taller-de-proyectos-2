@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WaykiSfe">
         <activity
+            android:name=".Bienvenido"
+            android:exported="false" />
+        <activity
             android:name=".Registro"
             android:exported="false" />
         <activity

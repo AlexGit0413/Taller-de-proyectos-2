@@ -1,3 +1,53 @@
 <resources>
     <string name="app_name">WaykiSfe</string>
+    <string name="default_web_client_id">910795230870-vfstte5hpuai48p2259vro3qpno2v9gd.apps.googleusercontent.com</string>
+
+
+    <string-array name="nacionalidades_array">
+        <item>Selecciona tu nacionalidad</item>
+        <item>Perú</item>
+        <item>Colombia</item>
+        <item>Chile</item>
+        <item>México</item>
+        <item>Brasil</item>
+        <item>Ecuador</item>
+        <item>Bolivia</item>
+        <item>Uruguay</item>
+        <item>Paraguay</item>
+        <item>Guatemala</item>
+        <item>Honduras</item>
+        <item>Venezuela</item>
+        <item>Costa Rica</item>
+        <item>Estados Unidos</item>
+        <item>Canadá</item>
+        <item>Italia</item>
+        <item>Alemania</item>
+        <item>Francia</item>
+        <item>Corea del Sur</item>
+        <item>Japón</item>
+        <item>Otro</item>
+
+    </string-array>
+
+    <string-array name="tipos_incidente">
+        <item>Robo</item>
+        <item>Acoso</item>
+        <item>Pérdida</item>
+        <item>Violencia</item>
+        <item>Emergencia médica</item>
+        <item>Incendio</item>
+        <item>Accidente de tránsito</item>
+        <item>Vandalismo</item>
+        <item>Consumo de drogas</item>
+        <item>Armas visibles</item>
+        <item>Persona sospechosa</item>
+        <item>Otro</item>
+    </string-array>
+
+
+    <string-array name="niveles_peligro">
+        <item>Rojo</item>
+        <item>Naranja</item>
+    </string-array>
+
 </resources>
