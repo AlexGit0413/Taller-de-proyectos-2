@@ -32,14 +32,16 @@ public class Inicio extends AppCompatActivity {
 
         containerBienvenido.startAnimation(slideUpFade);
 
-        btnSignIn.setOnClickListener(v -> {
+        btnSignIn.setOnClickListener(
+            v -> {
             v.startAnimation(bounce);
             startActivity(new Intent(Inicio.this, MainActivity.class));
         });
 
-        btnSignUp.setOnClickListener(v -> {
+        btnSignUp.setOnClickListener(
+            v -> {
             v.startAnimation(bounce);
             startActivity(new Intent(Inicio.this, Registro.class));
-        });
-    }
+        });
+    }
 }
