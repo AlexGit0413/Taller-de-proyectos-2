@@ -31,10 +31,10 @@ public class Registro extends AppCompatActivity {
     private Button btnRegistrar;
     private ImageView eyeIcon;
 
-    private View nacionalidadLayout;
-    private View dniLayout, pasaporteLayout;
+    private View nacionalidadLayout, dniLayout, pasaporteLayout;
     private boolean isPasswordVisible = false;
 
+    // Firebase
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
 
@@ -43,11 +43,11 @@ public class Registro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
-        // Firebase
+        // Inicializar Firebase Auth y Firestore
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
 
-        // Inicializar campos
+        // Inicializar vistas
         editTextNombre = findViewById(R.id.editTextNombre);
         editTextApellido = findViewById(R.id.editTextApellido);
         editTextEmail = findViewById(R.id.editTextEmail);
@@ -64,7 +64,7 @@ public class Registro extends AppCompatActivity {
         pasaporteLayout = findViewById(R.id.pasaporteLayout);
         nacionalidadLayout = findViewById(R.id.nacionalidadLayout);
 
-        // Spinner Nacionalidad
+        // Configurar spinner de nacionalidades
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,
                 R.array.nacionalidades_array,
@@ -72,16 +72,15 @@ public class Registro extends AppCompatActivity {
         );
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerNacionalidad.setAdapter(adapter);
-        spinnerNacionalidad.setSelection(0);
 
-        // Spinner Tipo de Documento
+        // Configurar spinner tipo de documento
         ArrayAdapter<String> tipoDocAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item,
                 new String[]{"DNI", "Pasaporte"});
         tipoDocAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerTipoDocumento.setAdapter(tipoDocAdapter);
 
-        // Mostrar u ocultar campos según tipo de documento
+        // Mostrar/ocultar campos según tipo de documento
         spinnerTipoDocumento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -98,7 +97,6 @@ public class Registro extends AppCompatActivity {
                     editTextDni.setText("");
                     params.topToBottom = R.id.pasaporteLayout;
                 }
-
                 nacionalidadLayout.setLayoutParams(params);
             }
 
@@ -106,7 +104,7 @@ public class Registro extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
-        // Mostrar / ocultar contraseña
+        // Mostrar/ocultar contraseña
         eyeIcon.setOnClickListener(v -> {
             isPasswordVisible = !isPasswordVisible;
             if (isPasswordVisible) {
@@ -123,7 +121,7 @@ public class Registro extends AppCompatActivity {
         btnRegistrar.setOnClickListener(v -> validarCamposObligatorios());
     }
 
-    // Validar campos obligatorios y contraseña segura
+    // Validar campos obligatorios
     private void validarCamposObligatorios() {
         String nombre = editTextNombre.getText().toString().trim();
         String apellido = editTextApellido.getText().toString().trim();
@@ -135,7 +133,6 @@ public class Registro extends AppCompatActivity {
         String dni = editTextDni.getText().toString().trim();
         String pasaporte = editTextPasaporte.getText().toString().trim();
 
-        // Validaciones
         if (TextUtils.isEmpty(nombre) || !nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")) {
             editTextNombre.setError("Ingrese solo letras");
             editTextNombre.requestFocus();
@@ -154,7 +151,7 @@ public class Registro extends AppCompatActivity {
             return;
         }
 
-        // Contraseña segura: al menos 8 caracteres, una mayúscula, una minúscula y un número
+        // Contraseña segura: mínimo 8 caracteres, 1 mayúscula, 1 minúscula y 1 número
         if (TextUtils.isEmpty(password) || !password.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}$")) {
             editTextPass.setError("Mínimo 8 caracteres, 1 mayúscula, 1 minúscula y 1 número");
             editTextPass.requestFocus();
@@ -162,13 +159,13 @@ public class Registro extends AppCompatActivity {
         }
 
         if (TextUtils.isEmpty(celular) || !celular.matches("\\d{9,}")) {
-            editTextCelular.setError("Ingrese un número válido (solo dígitos)");
+            editTextCelular.setError("Número inválido");
             editTextCelular.requestFocus();
             return;
         }
 
         if (TextUtils.isEmpty(contactoEmergencia) || !contactoEmergencia.matches("\\d{9,}")) {
-            editTextContactoEmergencia.setError("Ingrese un número válido (solo dígitos)");
+            editTextContactoEmergencia.setError("Número inválido");
             editTextContactoEmergencia.requestFocus();
             return;
         }
@@ -181,7 +178,7 @@ public class Registro extends AppCompatActivity {
 
         if (tipoDoc.equals("DNI")) {
             if (TextUtils.isEmpty(dni) || dni.length() != 8 || !dni.matches("\\d{8}")) {
-                editTextDni.setError("DNI inválido (8 dígitos)");
+                editTextDni.setError("DNI inválido");
                 editTextDni.requestFocus();
                 return;
             }
@@ -193,26 +190,25 @@ public class Registro extends AppCompatActivity {
             }
         }
 
-        // Validar que email y documento no existan
+        // Validar duplicados en Firebase
         validarCorreoYDocumento();
     }
 
+    // Verificar si el email o documento ya existe en Firestore
     private void validarCorreoYDocumento() {
         String email = editTextEmail.getText().toString().trim();
         String tipoDoc = spinnerTipoDocumento.getSelectedItem().toString();
         String doc = tipoDoc.equals("DNI") ? editTextDni.getText().toString().trim() : editTextPasaporte.getText().toString().trim();
         String campo = tipoDoc.equals("DNI") ? "dni" : "pasaporte";
 
-        db.collection("usuarios")
-                .whereEqualTo("email", email)
+        db.collection("usuarios").whereEqualTo("email", email)
                 .get()
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful() && !task.getResult().isEmpty()) {
-                        editTextEmail.setError("Este correo ya está registrado");
+                        editTextEmail.setError("Correo ya registrado");
                         editTextEmail.requestFocus();
                     } else {
-                        db.collection("usuarios")
-                                .whereEqualTo(campo, doc)
+                        db.collection("usuarios").whereEqualTo(campo, doc)
                                 .get()
                                 .addOnCompleteListener(docTask -> {
                                     if (docTask.isSuccessful() && !docTask.getResult().isEmpty()) {
@@ -231,6 +227,7 @@ public class Registro extends AppCompatActivity {
                 });
     }
 
+    // Registrar usuario en Firebase Authentication y guardar datos en Firestore
     private void registrarUsuario() {
         String nombre = editTextNombre.getText().toString().trim();
         String apellido = editTextApellido.getText().toString().trim();
@@ -243,11 +240,14 @@ public class Registro extends AppCompatActivity {
         String dni = editTextDni.getText().toString().trim();
         String pasaporte = editTextPasaporte.getText().toString().trim();
 
-        // Registro Firebase
+        // Firebase Authentication
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
+                        // Obtener UID del usuario
                         String userId = mAuth.getCurrentUser().getUid();
+
+                        // Crear mapa de datos del usuario
                         Map<String, Object> usuario = new HashMap<>();
                         usuario.put("nombre", nombre);
                         usuario.put("apellido", apellido);
@@ -256,21 +256,17 @@ public class Registro extends AppCompatActivity {
                         usuario.put("contacto_emergencia", contactoEmergencia);
                         usuario.put("nacionalidad", nacionalidad);
                         usuario.put("tipo_documento", tipoDoc);
-                        if (tipoDoc.equals("DNI")) {
-                            usuario.put("dni", dni);
-                        } else {
-                            usuario.put("pasaporte", pasaporte);
-                        }
+                        if (tipoDoc.equals("DNI")) usuario.put("dni", dni);
+                        else usuario.put("pasaporte", pasaporte);
 
+                        // Guardar en Firestore
                         db.collection("usuarios").document(userId)
                                 .set(usuario)
-                                .addOnSuccessListener(unused -> {
-                                    Toast.makeText(Registro.this, "✅ Registro exitoso", Toast.LENGTH_LONG).show();
-                                    finish();
-                                })
-                                .addOnFailureListener(e -> {
-                                    Toast.makeText(Registro.this, "❌ Error al guardar datos: " + e.getMessage(), Toast.LENGTH_LONG).show();
-                                });
+                                .addOnSuccessListener(unused ->
+                                        Toast.makeText(Registro.this, "✅ Registro exitoso", Toast.LENGTH_LONG).show())
+                                .addOnFailureListener(e ->
+                                        Toast.makeText(Registro.this, "❌ Error al guardar datos: " + e.getMessage(), Toast.LENGTH_LONG).show());
+
                     } else {
                         String error = task.getException() != null ? task.getException().getMessage() : "Error desconocido";
                         Toast.makeText(Registro.this, "❌ Error en registro: " + error, Toast.LENGTH_LONG).show();
