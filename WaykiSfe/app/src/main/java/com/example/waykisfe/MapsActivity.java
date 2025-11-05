@@ -21,6 +21,11 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.*;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
@@ -32,6 +37,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private FusedLocationProviderClient fusedLocationClient;
     private FirebaseFirestore firestore;
+    private DatabaseReference realtimeDatabase;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
 
     @Override
@@ -41,8 +47,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         firestore = FirebaseFirestore.getInstance();
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        realtimeDatabase = FirebaseDatabase.getInstance().getReference("reportes_automaticos");
 
-        // Cargar el mapa
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
 
@@ -55,6 +61,50 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         findViewById(R.id.fab_sos).setOnClickListener(v -> {
             Intent intent = new Intent(MapsActivity.this, Alerta.class);
             startActivity(intent);
+        });
+
+        // Escuchar cambios en Realtime Database y actualizar el mapa en tiempo real
+        realtimeDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (mMap == null) return;
+
+                mMap.clear();
+                cargarZonasPeligrosas(); // Mantener zonas de usuarios
+                for (DataSnapshot data : snapshot.getChildren()) {
+                    Map<String, Object> reporte = (Map<String, Object>) data.getValue();
+                    if (reporte == null) continue;
+
+                    Double lat = (Double) reporte.get("latitud");
+                    Double lng = (Double) reporte.get("longitud");
+                    String nivel = (String) reporte.get("nivel_peligro");
+                    if (lat == null || lng == null || nivel == null) continue;
+
+                    LatLng ubicacion = new LatLng(lat, lng);
+                    int colorStroke = nivel.equalsIgnoreCase("Naranja") ? Color.rgb(255, 165, 0) : Color.RED;
+                    int colorFill = nivel.equalsIgnoreCase("Naranja") ? 0x44FFA500 : 0x44FF0000;
+
+                    mMap.addCircle(new CircleOptions()
+                            .center(ubicacion)
+                            .radius(8)
+                            .strokeColor(colorStroke)
+                            .fillColor(colorFill));
+
+                    mMap.addMarker(new MarkerOptions()
+                            .position(ubicacion)
+                            .title("[Reporte Automático]")
+                            .snippet("Nivel: " + nivel)
+                            .icon(BitmapDescriptorFactory.fromBitmap(
+                                    Bitmap.createScaledBitmap(
+                                            BitmapFactory.decodeResource(getResources(), R.drawable.ia),
+                                            50, 50, false))));
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(MapsActivity.this, "Error al cargar reportes en tiempo real", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 
@@ -74,7 +124,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setZoomControlsEnabled(false);
         mMap.setMyLocationEnabled(true);
 
-        // Obtener ubicación actual
         fusedLocationClient.getLastLocation()
                 .addOnSuccessListener(this, location -> {
                     if (location != null) {
@@ -82,7 +131,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         float zoomLevel = 19.0f;
                         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLocation, zoomLevel));
 
-                        // Marcador y círculo de ubicación actual
                         mMap.addMarker(new MarkerOptions()
                                 .position(userLocation)
                                 .title("Tu ubicación actual")
@@ -94,18 +142,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 .strokeColor(Color.GRAY)
                                 .fillColor(Color.argb(50, 128, 128, 128)));
 
-                        // Verificar proximidad y registrar incidentes automáticamente
                         verificarProximidadYRegistrar(userLocation);
                     } else {
                         Toast.makeText(this, "No se pudo obtener la ubicación actual", Toast.LENGTH_SHORT).show();
                     }
                 });
 
-        // Cargar zonas peligrosas
         cargarZonasPeligrosas();
     }
 
-    // Función para registrar incidentes automáticamente si el usuario está cerca de cualquier zona peligrosa
     private void verificarProximidadYRegistrar(LatLng userLocation) {
         final double RADIUS = 5; // metros
 
@@ -130,10 +175,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         float distance = userLoc.distanceTo(zoneLoc);
 
                         if (distance < RADIUS) {
-                            // Mostrar alerta al usuario
                             Toast.makeText(MapsActivity.this, "¡Estás ingresando a una zona peligrosa! Se registrará automáticamente el incidente.", Toast.LENGTH_LONG).show();
 
-                            // Registrar incidente automáticamente en Firestore
                             Map<String, Object> incidente = new HashMap<>();
                             incidente.put("latitud", userLocation.latitude);
                             incidente.put("longitud", userLocation.longitude);
@@ -141,10 +184,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             incidente.put("timestamp", System.currentTimeMillis());
                             incidente.put("tipo", "Automático");
 
+                            // Guardar en Firestore
                             firestore.collection("reportes_automaticos")
                                     .add(incidente)
-                                    .addOnSuccessListener(docRef -> Toast.makeText(this, "Incidente registrado automáticamente", Toast.LENGTH_SHORT).show())
+                                    .addOnSuccessListener(docRef -> Toast.makeText(this, "Incidente registrado automáticamente en Firestore", Toast.LENGTH_SHORT).show())
                                     .addOnFailureListener(e -> Toast.makeText(this, "Error al registrar incidente: " + e.getMessage(), Toast.LENGTH_SHORT).show());
+
+                            // Guardar en Realtime Database
+                            realtimeDatabase.push().setValue(incidente)
+                                    .addOnSuccessListener(aVoid -> Toast.makeText(this, "Incidente guardado en Realtime Database", Toast.LENGTH_SHORT).show())
+                                    .addOnFailureListener(e -> Toast.makeText(this, "Error al guardar en Realtime Database: " + e.getMessage(), Toast.LENGTH_SHORT).show());
                         }
                     }
                 });
@@ -186,7 +235,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         zonasOcupadas.put(key, true);
                     }
 
-                    // Mostrar zonas verdes alrededor del usuario
                     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                         fusedLocationClient.getLastLocation()
                                 .addOnSuccessListener(location -> {
