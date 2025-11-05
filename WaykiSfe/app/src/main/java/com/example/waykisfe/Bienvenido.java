@@ -3,11 +3,13 @@ package com.example.waykisfe;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -20,17 +22,31 @@ public class Bienvenido extends AppCompatActivity {
     private FirebaseFirestore db;
     private CardView btnNext;
 
+    private ViewPager2 viewPager;
+    private ViewPagerAdapter adapter;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bienvenido);
 
+        // --- Inicialización de vistas ---
         txtWelcome = findViewById(R.id.txtWelcome);
         btnNext = findViewById(R.id.btnInfo);
+        viewPager = findViewById(R.id.viewPager);
 
+        // Inicialmente ocultamos el carrusel
+        viewPager.setVisibility(View.GONE);
+
+        // --- Firebase ---
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
 
+        // --- Adapter del carrusel ---
+        adapter = new ViewPagerAdapter(this);
+        viewPager.setAdapter(adapter);
+
+        // --- Saludo al usuario ---
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
         if (currentUser != null) {
@@ -59,9 +75,23 @@ public class Bienvenido extends AppCompatActivity {
             txtWelcome.setText("¡Hola, Usuario!");
         }
 
+        // --- Botón de flecha ---
         btnNext.setOnClickListener(v -> {
-            Intent intent = new Intent(Bienvenido.this, MapsActivity.class);
-            startActivity(intent);
+            if (viewPager.getVisibility() == View.GONE) {
+                // Mostrar el carrusel por primera vez
+                viewPager.setVisibility(View.VISIBLE);
+                return; // no avanzar todavía
+            }
+
+            if (viewPager.getCurrentItem() < adapter.getItemCount() - 1) {
+                // Avanza al siguiente fragmento
+                viewPager.setCurrentItem(viewPager.getCurrentItem() + 1, true);
+            } else {
+                // Último fragmento, abrir MapsActivity
+                Intent intent = new Intent(Bienvenido.this, MapsActivity.class);
+                startActivity(intent);
+                finish();
+            }
         });
     }
 }
