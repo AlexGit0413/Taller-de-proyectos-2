@@ -1,246 +1,313 @@
-package com.example.waykisfe;
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D2DC6C"
+    tools:context=".Registro">
 
-import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Patterns;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.Spinner;
-import android.widget.Toast;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:backgroundTint="#FFFFFF"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp">
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
 
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.FirebaseFirestore;
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
 
-import java.util.HashMap;
-import java.util.Map;
+                <!-- Título -->
+                <TextView
+                    android:id="@+id/textViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/dyna"
+                    android:text="Registro"
+                    android:textColor="#1E1E1E"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-public class Registro extends AppCompatActivity {
+                <!-- Lottie -->
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieAnimationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/llama"
+                    app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="8dp" />
 
-    private TextInputEditText editTextNombre, editTextApellido, editTextEmail, editTextPass, editTextCelular;
-    private TextInputEditText editTextDni, editTextPasaporte;
-    private Spinner spinnerNacionalidad, spinnerTipoDocumento;
-    private Button btnRegistrar;
-    private ImageView eyeIcon;
+                <!-- Nombre -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nombreLayout"
+                    style="@style/MyTextInputStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:hint="Nombre completo"
+                    app:startIconDrawable="@drawable/usua"
+                    app:startIconTint="@android:color/black"
+                    app:layout_constraintTop_toBottomOf="@id/lottieAnimationView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
 
-    private View nacionalidadLayout;
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextNombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-    private View dniLayout, pasaporteLayout;
-    private boolean isPasswordVisible = false;
+                <!-- Apellido -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/apellidoLayout"
+                    style="@style/MyTextInputStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:hint="Apellido"
+                    app:layout_constraintTop_toBottomOf="@id/nombreLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
 
-    private FirebaseAuth mAuth;
-    private FirebaseFirestore db;
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextApellido"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro);
+                <!-- Email -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emailLayout"
+                    style="@style/MyTextInputStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:hint="Correo electrónico"
+                    app:startIconDrawable="@drawable/correo"
+                    app:startIconTint="@android:color/black"
+                    app:layout_constraintTop_toBottomOf="@id/apellidoLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
 
-        mAuth = FirebaseAuth.getInstance();
-        db = FirebaseFirestore.getInstance();
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:textColor="#000000" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-        editTextNombre = findViewById(R.id.editTextNombre);
-        editTextApellido = findViewById(R.id.editTextApellido);
-        editTextEmail = findViewById(R.id.editTextEmail);
-        editTextPass = findViewById(R.id.editTextPass);
-        editTextCelular = findViewById(R.id.editTextCelular);
-        editTextDni = findViewById(R.id.editTextDni);
-        editTextPasaporte = findViewById(R.id.editTextPasaporte);
-        spinnerNacionalidad = findViewById(R.id.spinnerNacionalidad);
-        spinnerTipoDocumento = findViewById(R.id.spinnerTipoDocumento);
-        btnRegistrar = findViewById(R.id.btn_registrar_usuario);
-        eyeIcon = findViewById(R.id.eyeIcon);
-        dniLayout = findViewById(R.id.dniLayout);
-        pasaporteLayout = findViewById(R.id.pasaporteLayout);
-        nacionalidadLayout = findViewById(R.id.nacionalidadLayout);
+                <!-- Contraseña -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passLayout"
+                    style="@style/MyTextInputStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:hint="Contraseña"
+                    app:startIconDrawable="@drawable/contra"
+                    app:startIconTint="@android:color/black"
+                    app:layout_constraintTop_toBottomOf="@id/emailLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-                this,
-                R.array.nacionalidades_array,
-                android.R.layout.simple_spinner_item
-        );
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerNacionalidad.setAdapter(adapter);
-        spinnerNacionalidad.setSelection(0);
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextPass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:paddingEnd="48dp"
+                        android:textColor="#000000" />
 
-        ArrayAdapter<String> tipoDocAdapter = new ArrayAdapter<>(this.peekAvailableContext(),
-                android.R.layout.simple_spinner_item,
-                new String[]{"DNI", "Pasaporte"});
-        tipoDocAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerTipoDocumento.setAdapter(tipoDocAdapter);
+                    <ImageView
+                        android:id="@+id/eyeIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/visibility_off"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
 
-        // Bloque corregido para mostrar dinámicamente el campo de documento según el tipo seleccionado
-        spinnerTipoDocumento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) nacionalidadLayout.getLayoutParams();
+                <!-- Tipo de documento -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/documentoTipoLayout"
+                    style="@style/MyTextInputStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:hint="Tipo de documento"
+                    app:layout_constraintTop_toBottomOf="@id/passLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
 
-                if (spinnerTipoDocumento.getSelectedItem().toString().equals("DNI")) {
-                    dniLayout.setVisibility(View.VISIBLE);
-                    pasaporteLayout.setVisibility(View.GONE);
-                    editTextPasaporte.setText(""); // Limpia campo oculto
-                    params.topToBottom = R.id.dniLayout;
-                } else {
-                    dniLayout.setVisibility(View.GONE);
-                    pasaporteLayout.setVisibility(View.VISIBLE);
-                    editTextDni.setText(""); // Limpia campo oculto
-                    params.topToBottom = R.id.pasaporteLayout;
-                }
+                    <Spinner
+                        android:id="@+id/spinnerTipoDocumento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_background" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                nacionalidadLayout.setLayoutParams(params);
-            }
+                <!-- DNI -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/dniLayout"
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:hint="DNI"
+                    app:layout_constraintTop_toBottomOf="@id/documentoTipoLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
-        });
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextDni"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="8"
+                        android:textColor="#000000" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Pasaporte -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/pasaporteLayout"
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:hint="Pasaporte"
+                    app:layout_constraintTop_toBottomOf="@id/documentoTipoLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextPasaporte"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#000000" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Nacionalidad -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nacionalidadLayout"
+                    style="@style/MyTextInputStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:hint="Nacionalidad"
+                    app:layout_constraintTop_toBottomOf="@id/pasaporteLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <Spinner
+                        android:id="@+id/spinnerNacionalidad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_background" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Celular -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/celularLayout"
+                    style="@style/MyTextInputStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:hint="Celular"
+                    app:startIconDrawable="@drawable/celu"
+                    app:startIconTint="@android:color/black"
+                    app:layout_constraintTop_toBottomOf="@id/nacionalidadLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextCelular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:textColor="#000000" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Contacto de emergencia -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/contactoEmergenciaLayout"
+                    style="@style/MyTextInputStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:hint="Número de contacto de emergencia"
+                    app:startIconDrawable="@drawable/celu"
+                    app:startIconTint="@android:color/black"
+                    app:layout_constraintTop_toBottomOf="@id/celularLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextContactoEmergencia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:textColor="#000000" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Botón registro -->
+                <!-- Botón registro -->
+                <Button
+                    android:id="@+id/btn_registrar_usuario"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Registrarse"
+                    android:textColor="#000000"
+                android:backgroundTint="#FFE383"
+                android:layout_marginTop="12dp"
+                app:cornerRadius="12dp"
+                app:layout_constraintTop_toBottomOf="@id/contactoEmergenciaLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
 
-
-
-        eyeIcon.setOnClickListener(v -> {
-            isPasswordVisible = !isPasswordVisible;
-            if (isPasswordVisible) {
-                editTextPass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                eyeIcon.setImageResource(R.drawable.visibility);
-            } else {
-                editTextPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                eyeIcon.setImageResource(R.drawable.visibility_off);
-            }
-            editTextPass.setSelection(editTextPass.getText().length());
-        });
-
-        btnRegistrar.setOnClickListener(v -> validarCorreoYDocumento());
-    }
-
-    private void validarCorreoYDocumento() {
-        String email = editTextEmail.getText().toString().trim();
-        String tipoDoc = spinnerTipoDocumento.getSelectedItem().toString();
-        String doc = tipoDoc.equals("DNI") ? editTextDni.getText().toString().trim() : editTextPasaporte.getText().toString().trim();
-        String campo = tipoDoc.equals("DNI") ? "dni" : "pasaporte";
-
-        if (!TextUtils.isEmpty(email)) {
-            db.collection("usuarios")
-                    .whereEqualTo("email", email)
-                    .get()
-                    .addOnCompleteListener(task -> {
-                        if (task.isSuccessful() && !task.getResult().isEmpty()) {
-                            editTextEmail.setError("Este correo ya está registrado");
-                            editTextEmail.requestFocus();
-                        } else {
-                            db.collection("usuarios")
-                                    .whereEqualTo(campo, doc)
-                                    .get()
-                                    .addOnCompleteListener(docTask -> {
-                                        if (docTask.isSuccessful() && !docTask.getResult().isEmpty()) {
-                                            if (tipoDoc.equals("DNI")) {
-                                                editTextDni.setError("DNI ya registrado");
-                                                editTextDni.requestFocus();
-                                            } else {
-                                                editTextPasaporte.setError("Pasaporte ya registrado");
-                                                editTextPasaporte.requestFocus();
-                                            }
-                                        } else {
-                                            registrarUsuario();
-                                        }
-                                    });
-                        }
-                    });
-        }
-    }
-
-    private void registrarUsuario() {
-        String nombre = editTextNombre.getText().toString().trim();
-        String apellido = editTextApellido.getText().toString().trim();
-        String email = editTextEmail.getText().toString().trim();
-        String password = editTextPass.getText().toString().trim();
-        String celular = editTextCelular.getText().toString().trim();
-        String nacionalidad = spinnerNacionalidad.getSelectedItem().toString();
-        String tipoDoc = spinnerTipoDocumento.getSelectedItem().toString();
-        String dni = editTextDni.getText().toString().trim();
-        String pasaporte = editTextPasaporte.getText().toString().trim();
-
-        if (TextUtils.isEmpty(nombre) || !nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")) {
-            editTextNombre.setError("Ingrese solo letras");
-            editTextNombre.requestFocus();
-            return;
-        }
-
-        if (TextUtils.isEmpty(apellido) || !apellido.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")) {
-            editTextApellido.setError("Ingrese solo letras");
-            editTextApellido.requestFocus();
-            return;
-        }
-
-        if (TextUtils.isEmpty(email) || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            editTextEmail.setError("Correo inválido");
-            editTextEmail.requestFocus();
-            return;
-        }
-
-        if (TextUtils.isEmpty(password) || password.length() < 8 || !password.matches(".*\\d.*")) {
-            editTextPass.setError("Mínimo 8 caracteres y un número");
-            editTextPass.requestFocus();
-            return;
-        }
-
-        if (TextUtils.isEmpty(celular)) {
-            editTextCelular.setError("Ingrese celular");
-            editTextCelular.requestFocus();
-            return;
-        }
-
-        if (tipoDoc.equals("DNI")) {
-            if (TextUtils.isEmpty(dni) || dni.length() != 8 || !dni.matches("\\d{8}")) {
-                editTextDni.setError("DNI inválido (8 dígitos)");
-                editTextDni.requestFocus();
-                return;
-            }
-        } else {
-            if (TextUtils.isEmpty(pasaporte) || pasaporte.length() < 6) {
-                editTextPasaporte.setError("Pasaporte inválido");
-                editTextPasaporte.requestFocus();
-                return;
-            }
-        }
-
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        String userId = mAuth.getCurrentUser().getUid();
-                        Map<String, Object> usuario = new HashMap<>();
-                        usuario.put("nombre", nombre);
-                        usuario.put("apellido", apellido);
-                        usuario.put("email", email);
-                        usuario.put("celular", celular);
-                        usuario.put("nacionalidad", nacionalidad);
-                        usuario.put("tipo_documento", tipoDoc);
-                        if (tipoDoc.equals("DNI")) {
-                            usuario.put("dni", dni);
-                        } else {
-                            usuario.put("pasaporte", pasaporte);
-                        }
-
-                        db.collection("usuarios").document(userId)
-                                .set(usuario)
-                                .addOnSuccessListener(unused -> {
-                                    Toast.makeText(Registro.this, "✅ Registro exitoso", Toast.LENGTH_LONG).show();
-                                    finish();
-                                })
-                                .addOnFailureListener(e -> {
-                                    Toast.makeText(Registro.this, "❌ Error al guardar datos: " + e.getMessage(), Toast.LENGTH_LONG).show();
-                                });
-                    } else {
-                        String error = task.getException() != null ? task.getException().getMessage() : "Error desconocido";
-                        Toast.makeText(Registro.this, "❌ Error en registro: " + error, Toast.LENGTH_LONG).show();
-                    }
-                });
-    }
-}
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
