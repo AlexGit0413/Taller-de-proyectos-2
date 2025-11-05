@@ -46,6 +46,9 @@ public class Bienvenido extends AppCompatActivity {
         adapter = new ViewPagerAdapter(this);
         viewPager.setAdapter(adapter);
 
+        // --- Animación entre fragmentos ---
+        viewPager.setPageTransformer(new DepthPageTransformer());
+
         // --- Saludo al usuario ---
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
@@ -84,12 +87,13 @@ public class Bienvenido extends AppCompatActivity {
             }
 
             if (viewPager.getCurrentItem() < adapter.getItemCount() - 1) {
-                // Avanza al siguiente fragmento
+                // Avanza al siguiente fragmento con animación
                 viewPager.setCurrentItem(viewPager.getCurrentItem() + 1, true);
             } else {
-                // Último fragmento, abrir MapsActivity
+                // Último fragmento, abrir MapsActivity con animación
                 Intent intent = new Intent(Bienvenido.this, MapsActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
             }
         });
