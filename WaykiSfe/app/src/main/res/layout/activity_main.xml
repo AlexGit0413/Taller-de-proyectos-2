@@ -49,7 +49,7 @@
                 app:lottie_loop="true"
                 app:lottie_rawRes="@raw/login" />
 
-            <com.google.android.material.textfield.TextInputLayout
+             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/emailLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
@@ -79,7 +79,6 @@
                     android:textColor="#000000"
                     android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/passLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -102,7 +101,6 @@
                 app:passwordToggleEnabled="true"
                 app:startIconDrawable="@drawable/contra"
                 app:startIconTint="#000000">
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editPassword"
                     android:layout_width="match_parent"
@@ -111,7 +109,6 @@
                     android:textColor="#000000"
                     android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
-
             <Button
                 android:id="@+id/btn_login"
                 android:layout_width="162dp"
@@ -124,7 +121,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/passLayout" />
-
             <Button
                 android:id="@+id/btn_register"
                 android:layout_width="140dp"
