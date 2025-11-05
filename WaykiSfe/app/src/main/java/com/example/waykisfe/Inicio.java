@@ -34,6 +34,12 @@ public class Inicio extends AppCompatActivity {
         slideUpFade = AnimationUtils.loadAnimation(this, R.anim.slide_up_fade);
 
         containerBienvenido.startAnimation(slideUpFade);
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            // Usuario ya logueado → ir directo a Bienvenido
+            startActivity(new Intent(Inicio.this, Bienvenido.class));
+            finish();
+        }
 
         btnSignIn.setOnClickListener(v -> {
             v.startAnimation(bounce);
