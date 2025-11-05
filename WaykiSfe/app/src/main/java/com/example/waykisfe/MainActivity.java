@@ -1,6 +1,5 @@
-package com.example.waykisfe;
+package com.example.waykisafe;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,7 +10,6 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.waykisfe.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -24,7 +22,6 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -42,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     private GoogleSignInClient mGoogleSignInClient;
     private FirebaseFirestore db;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,19 +53,16 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
 
+        // Google Sign-In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
-
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
+        // Click listeners
         btnLogin.setOnClickListener(v -> loginUser());
-        btnRegister.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, Registro.class);
-            startActivity(intent);
-        });
-
+        btnRegister.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Registro.class)));
         findViewById(R.id.btn_google_sign_in).setOnClickListener(v -> signInWithGoogle());
     }
 
@@ -81,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
             editTextEmail.setError("Correo electrónico requerido");
             return;
         }
-
         if (TextUtils.isEmpty(password)) {
             editPassword.setError("Contraseña requerida");
             return;
@@ -91,9 +83,9 @@ public class MainActivity extends AppCompatActivity {
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         FirebaseUser user = mAuth.getCurrentUser();
-                        Toast.makeText(MainActivity.this, "Bienvenido " + user.getEmail(), Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(MainActivity.this, Bienvenido.class));
-                        finish();
+                        if (user != null) {
+                            checkUserData(user.getUid());
+                        }
                     } else {
                         Toast.makeText(MainActivity.this, "Error de autenticación: " + task.getException().getMessage(),
                                 Toast.LENGTH_SHORT).show();
@@ -114,10 +106,12 @@ public class MainActivity extends AppCompatActivity {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
                 GoogleSignInAccount account = task.getResult(ApiException.class);
-                firebaseAuthWithGoogle(account.getIdToken(), account);
+                if (account != null) {
+                    firebaseAuthWithGoogle(account.getIdToken(), account);
+                }
             } catch (ApiException e) {
                 Log.w(TAG, "Google sign in failed", e);
-                Toast.makeText(this, "Error en login con Google: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Error login Google: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -128,34 +122,45 @@ public class MainActivity extends AppCompatActivity {
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         FirebaseUser user = mAuth.getCurrentUser();
+                        if (user != null) {
+                            db.collection("usuarios").document(user.getUid()).get()
+                                    .addOnSuccessListener(documentSnapshot -> {
+                                        if (!documentSnapshot.exists()) {
+                                            // Nuevo usuario → crear datos mínimos
+                                            Map<String, Object> datos = new HashMap<>();
+                                            datos.put("nombre", account.getGivenName() != null ? account.getGivenName() : "");
+                                            datos.put("apellido", account.getFamilyName() != null ? account.getFamilyName() : "");
+                                            datos.put("email", account.getEmail());
+                                            datos.put("celular", "");
+                                            datos.put("contacto_emergencia", "");
+                                            datos.put("completo", false);
 
-                        db.collection("usuarios").document(user.getUid()).get()
-                                .addOnSuccessListener(documentSnapshot -> {
-                                    if (!documentSnapshot.exists()) {
-
-                                        Map<String, Object> datos = new HashMap<>();
-                                        datos.put("nombre", account.getGivenName());
-                                        datos.put("apellido", account.getFamilyName());
-                                        datos.put("email", account.getEmail());
-                                        datos.put("celular", "");
-                                        datos.put("nacionalidad", "");
-
-                                        db.collection("usuarios").document(user.getUid()).set(datos)
-                                                .addOnSuccessListener(unused -> Log.d(TAG, "Datos guardados para Google"))
-                                                .addOnFailureListener(e -> Log.w(TAG, "Error al guardar datos de Google", e));
-                                    }
-
-                                    Toast.makeText(MainActivity.this, "Bienvenido " + user.getEmail(), Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(MainActivity.this, Bienvenido.class));
-                                    finish();
-                                });
-
+                                            db.collection("usuarios").document(user.getUid())
+                                                    .set(datos)
+                                                    .addOnSuccessListener(unused -> checkUserData(user.getUid()))
+                                                    .addOnFailureListener(e -> Log.w(TAG, "Error guardando datos", e));
+                                        } else {
+                                            checkUserData(user.getUid());
+                                        }
+                                    });
+                        }
                     } else {
-                        Toast.makeText(MainActivity.this, "Error de autenticación con Google: " + task.getException().getMessage(),
-                                Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Error autenticación con Google: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }
+
+    private void checkUserData(String uid) {
+        db.collection("usuarios").document(uid).get()
+                .addOnSuccessListener(documentSnapshot -> {
+                    Boolean completo = documentSnapshot.getBoolean("completo");
+                    if (completo != null && completo) {
+                        startActivity(new Intent(MainActivity.this, Bienvenido.class));
+                    } else {
+                        startActivity(new Intent(MainActivity.this, Completar.class));
+                    }
+                    finish();
+                })
+                .addOnFailureListener(e -> Toast.makeText(MainActivity.this, "Error al obtener datos: " + e.getMessage(), Toast.LENGTH_SHORT).show());
+    }
 }
-
-
