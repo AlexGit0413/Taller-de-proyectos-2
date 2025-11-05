@@ -21,4 +21,15 @@
         android:contentDescription="Botón SOS"
         app:backgroundTint="@android:color/holo_red_dark"
         app:srcCompat="@android:drawable/ic_dialog_alert" />
+
+    <!-- 🔘 Botón flotante ICONO -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_icono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="16dp"
+        android:contentDescription="Botón Icono"
+        app:backgroundTint="@android:color/holo_blue_dark"
+        app:srcCompat="@android:drawable/ic_menu_mylocation" />
 </FrameLayout>
