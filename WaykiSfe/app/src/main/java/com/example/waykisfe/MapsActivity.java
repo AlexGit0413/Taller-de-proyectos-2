@@ -8,7 +8,10 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -65,7 +68,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
-            ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
                     LOCATION_PERMISSION_REQUEST_CODE);
@@ -80,21 +83,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setRotateGesturesEnabled(true);
         mMap.getUiSettings().setTiltGesturesEnabled(true);
 
-        // Limites de zoom (opcional)
+        // Limites de zoom
         mMap.setMinZoomPreference(15f);
         mMap.setMaxZoomPreference(21f);
 
         mMap.setMyLocationEnabled(true);
 
-        // Mostrar ubicación inicial y cargar zonas
+        // Mostrar ubicación y seguimiento
         mostrarUbicacionUsuario();
+
+        // Cargar zonas y leyenda
         cargarZonasPeligrosas();
+        mostrarLeyendaColores();
     }
 
     private void mostrarUbicacionUsuario() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) return;
 
-        // Obtener la última ubicación conocida
         fusedLocationClient.getLastLocation().addOnSuccessListener(location -> {
             if (location != null) {
                 LatLng userLocation = new LatLng(location.getLatitude(), location.getLongitude());
@@ -116,7 +121,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-        // Seguimiento automático del usuario
+        // Seguimiento del usuario
         LocationRequest locationRequest = LocationRequest.create()
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
                 .setInterval(5000)
@@ -199,7 +204,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         zonasOcupadas.put(key, true);
                     }
 
-                    // Reportes IA
                     firestore.collection("reportes_ia")
                             .get()
                             .addOnSuccessListener(queryIA -> {
@@ -234,7 +238,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     zonasOcupadas.put(key, true);
                                 }
 
-                                // Zonas verdes alrededor del usuario
+                                // Zonas verdes
                                 fusedLocationClient.getLastLocation()
                                         .addOnSuccessListener(location -> {
                                             if (location != null) {
@@ -260,5 +264,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                         });
                             });
                 });
+    }
+
+    // --------------------- LEYENDA ---------------------
+    private void mostrarLeyendaColores() {
+        TextView leyenda = new TextView(this);
+        leyenda.setText("Leyenda:\nRojo = Zona Peligrosa\nNaranja = Zona Moderada\nVerde = Zona Segura");
+        leyenda.setBackgroundColor(Color.argb(180, 255, 255, 255)); // fondo blanco semi-transparente
+        leyenda.setTextColor(Color.BLACK);
+        leyenda.setPadding(20, 20, 20, 20);
+        leyenda.setTextSize(14f);
+
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.WRAP_CONTENT,
+                FrameLayout.LayoutParams.WRAP_CONTENT,
+                Gravity.TOP | Gravity.START
+        );
+        params.setMargins(20, 50, 0, 0);
+
+        addContentView(leyenda, params);
     }
 }
