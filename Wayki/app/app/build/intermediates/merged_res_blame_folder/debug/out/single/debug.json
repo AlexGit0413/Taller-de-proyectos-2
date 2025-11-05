@@ -1,0 +1,202 @@
+[
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_hospi.png.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\hospi.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_ia.png.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\ia.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\layout_dialog_seguro.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\layout\\dialog_seguro.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\raw_login.json.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\raw\\login.json"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_bon.png.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\bon.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\raw_ubi.json.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\raw\\ubi.json"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\font_rowdies.ttf.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\font\\rowdies.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_correo.png.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\correo.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\raw_llama.json.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\raw\\llama.json"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_middle_circle.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\middle_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_ripple_circle.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\ripple_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_alarm.png.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\alarm.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_verde.png.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\verde.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_visibility_off.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\visibility_off.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_poli.png.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\poli.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\layout_activity_registro.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\layout\\activity_registro.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_contra.png.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\contra.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_visibility.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\visibility.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_usua.png.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\usua.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\layout_activity_reporte.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\layout\\activity_reporte.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_human.png.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\human.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\layout_activity_maps.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\layout\\activity_maps.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\navigation_nav_graph2.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\navigation\\nav_graph2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.waykisafev1.app-merged_res-5:/raw_repo.json.flat",
+        "source": "com.example.waykisafev1.app-main-7:/raw/repo.json"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_ubi.png.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\ubi.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\layout_activity_bienvenido.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\layout\\activity_bienvenido.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\font_dyna.ttf.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\font\\dyna.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_flecha.png.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\flecha.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\layout_activity_alerta.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\layout\\activity_alerta.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_outer_circle.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\outer_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\drawable_celu.png.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\drawable\\celu.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-merged_res-5:\\navigation_nav_graph3.xml.flat",
+        "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\daemon\\8.13\\com.example.waykisafev1.app-main-7:\\navigation\\nav_graph3.xml"
+    }
+]

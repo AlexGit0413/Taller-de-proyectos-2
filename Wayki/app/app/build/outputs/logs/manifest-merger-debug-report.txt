@@ -1,0 +1,701 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:2:1-48:12
+MERGED from [androidx.databinding:viewbinding:8.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\89dd3a8273c68491a1ffe1522a6bde25\transformed\viewbinding-8.1.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-common:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d83bcdca3f757ead54da9d3b2e4d1a95\transformed\navigation-common-2.7.5\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\cd3134c0d5c15488397ebc462ddfb372\transformed\navigation-common-ktx-2.7.5\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\67472ed58f6183dd2d140769d5a34abf\transformed\navigation-runtime-2.7.5\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\da79d5a5093b9d445d05e5d57ae44627\transformed\navigation-runtime-ktx-2.7.5\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-fragment:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fe357784ca8fd9d446eeda4c0329cd30\transformed\navigation-fragment-2.7.5\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7010e1e73bbe749ba9e5801a41e0cf13\transformed\navigation-fragment-ktx-2.7.5\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-ui-ktx:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\71507472a05a9c498dd92ff7757e4650\transformed\navigation-ui-ktx-2.7.5\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-ui:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90241aca31e806c9c65549b92a868722\transformed\navigation-ui-2.7.5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\0421b6df7f7f0856b5140a5f22b4e13c\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:17:1-75:12
+MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90988ba427b9fc03ddcf28e77b0c9302\transformed\play-services-auth-21.0.0\AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:17:1-44:12
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d61045f95aecbd088042437a9d138820\transformed\play-services-location-21.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.airbnb.android:lottie:6.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fcc914e9ca90864d31ede8a468d426c4\transformed\lottie-6.1.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\a967ad3a7ce60bef95ed3c9acb6c36b4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\1c5ce4d33c26023c7a91432fc9530287\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\878abf9963edd5f00a7fd9c1ae97c16e\transformed\appcompat-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\9dad9ac1e37a8e2d1f27df4a9d331d21\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\e7fd5e7582ce33e0f2e447388295d7f3\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.10] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7b20f11396da71dd800e7b6f9979dba5\transformed\play-services-auth-base-18.0.10\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f41c5ea713a197c6dfc24018fa587774\transformed\play-services-fido-20.0.1\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\58412dd14f24fe23bd36266142769be2\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\6f0614cd389264800dd3576c0ae58445\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\cb496374a742b7d69e82708f0836c683\transformed\play-services-base-18.1.0\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\211bb02c447ffd283828ebb0ed6491ed\transformed\recaptcha-18.4.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d17a657007fa22acaefd3a49f974e272\transformed\integrity-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fea0a2eb02f6dbfadd82db41e5014199\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f1776ea75176c8081dde206d8671fd31\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:15:1-41:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\803f9a574b852e019eb1de46ee444d32\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\e933421c2ec61e993c93f4abe7807a60\transformed\transition-1.5.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\02da665c611854b2bfb9e5c6ff3dbb53\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\9998ed000df0e88ddb10b99928185c9a\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3d8fc761820fdf1bbeeb9f79ee7f2313\transformed\loader-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\766d490c13ea3065a0c7ecbdb9402495\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8e3102c5fc1e4e536675aafcb1b13d0d\transformed\emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.fragment:fragment-ktx:1.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\ecf53d6aa64760ff39d158e0260a6ebe\transformed\fragment-ktx-1.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.8.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\76948ea6bef14e0f479477798defee26\transformed\activity-ktx-1.8.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\280fb272cf879239166b1cb4b12495e3\transformed\lifecycle-runtime-ktx-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5d9b9505e8ee72916d233191ad4d543c\transformed\lifecycle-viewmodel-ktx-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\a3b80178aeece704fe09b51f97f4fb75\transformed\lifecycle-livedata-core-ktx-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\602611e31b7d0ab70af092c1c7f79b9a\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\32a27b41bc761ca829ddd2380e7ca542\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\196aaa2fe2f5fba0c662bfedb10a7637\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\e78422d6028fc4de0a8879a9996649eb\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d159af6211a4dee26c69acd4cb99df88\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\13f7f430c0f3160f2c5e108d69566dc8\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\69bb12521672ef3998f13cac93231a48\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.window:window:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\110843d33fcabf2e6428bfb94c794dca\transformed\window-1.0.0\AndroidManifest.xml:17:1-33:12
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\4d8193744dd97ac9fe2fe9c4806ba67c\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\b61f7f39f910a7dbdb7c45f4f86cdd53\transformed\play-services-basement-18.3.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\9cbf3e8e21afa6eec785d71f75d06c7b\transformed\fragment-1.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.8.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\62e61fea310fc48639dc2e663ca11907\transformed\activity-1.8.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f4f1f256702b57f40bd06fd35cf5e156\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\1cfbe1f7adfc1978c67f63e4483dc5be\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\6fa2da992a33dbf2090afdac5de8a0de\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\a21ff7ec96a7d4051ee147e248d6a2f4\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\746c9bdb5575185bc3f6c44b15e665e1\transformed\browser-1.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\4542ac3b6891c8b51c197048d12d3996\transformed\core-ktx-1.13.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\62c3062746eb1d610a2fa83b858b6c5c\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\eae124296f33d7a589959b6c462da2c6\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\9f72abc2f0828ff12d173bfb2664a2e8\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8b2f7c68dd0afab8707ba26f25f84f7e\transformed\core-1.13.0\AndroidManifest.xml:17:1-30:12
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\4a510b7102427194d8ffd2782196fcc8\transformed\volley-1.2.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\83a81dfaa1b39ca793ac0f70b259f8b2\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5967cbd49ead43d0aa4620aedb3799d3\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\eaea6bdc0838c73a98795c328d7e01b0\transformed\firebase-components-17.1.5\AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\cdd749fbbf504e6d93a0ecdb496d44ea\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\06ba4b33b239ebc769f101a4ffd6353a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d4d1e20766473bc78032362377d14b95\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\45a8d9a09a528cabc0542eb54c715493\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\881764cba0f37ab58383008fe41021ea\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\dbcef98b81b0ee443ce7408ad83d210f\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\c64ea74421b9b894fc71db1ec2110e9a\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\9335a36477ece17ca873f8f0b20d1bd0\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7e013ef5d94fe071afcb6e6de5c2a3c2\transformed\grpc-android-1.57.2\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\ea08c3d7bddca020637201ee5902367d\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\36e11a0da6e4e35bb0b758381be2fcd2\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
+	package
+		INJECTED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:5:5-67
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\211bb02c447ffd283828ebb0ed6491ed\transformed\recaptcha-18.4.0\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\211bb02c447ffd283828ebb0ed6491ed\transformed\recaptcha-18.4.0\AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:6:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:7:22-78
+application
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:9:5-46:19
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:9:5-46:19
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\0421b6df7f7f0856b5140a5f22b4e13c\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\0421b6df7f7f0856b5140a5f22b4e13c\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:25:5-36:19
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:25:5-36:19
+MERGED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90988ba427b9fc03ddcf28e77b0c9302\transformed\play-services-auth-21.0.0\AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90988ba427b9fc03ddcf28e77b0c9302\transformed\play-services-auth-21.0.0\AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d61045f95aecbd088042437a9d138820\transformed\play-services-location-21.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d61045f95aecbd088042437a9d138820\transformed\play-services-location-21.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.airbnb.android:lottie:6.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fcc914e9ca90864d31ede8a468d426c4\transformed\lottie-6.1.0\AndroidManifest.xml:7:5-20
+MERGED from [com.airbnb.android:lottie:6.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fcc914e9ca90864d31ede8a468d426c4\transformed\lottie-6.1.0\AndroidManifest.xml:7:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\a967ad3a7ce60bef95ed3c9acb6c36b4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\a967ad3a7ce60bef95ed3c9acb6c36b4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f41c5ea713a197c6dfc24018fa587774\transformed\play-services-fido-20.0.1\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f41c5ea713a197c6dfc24018fa587774\transformed\play-services-fido-20.0.1\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\6f0614cd389264800dd3576c0ae58445\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\6f0614cd389264800dd3576c0ae58445\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\cb496374a742b7d69e82708f0836c683\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\cb496374a742b7d69e82708f0836c683\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d17a657007fa22acaefd3a49f974e272\transformed\integrity-1.2.0\AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d17a657007fa22acaefd3a49f974e272\transformed\integrity-1.2.0\AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fea0a2eb02f6dbfadd82db41e5014199\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fea0a2eb02f6dbfadd82db41e5014199\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f1776ea75176c8081dde206d8671fd31\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f1776ea75176c8081dde206d8671fd31\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:22:5-39:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8e3102c5fc1e4e536675aafcb1b13d0d\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8e3102c5fc1e4e536675aafcb1b13d0d\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\32a27b41bc761ca829ddd2380e7ca542\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\32a27b41bc761ca829ddd2380e7ca542\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.window:window:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\110843d33fcabf2e6428bfb94c794dca\transformed\window-1.0.0\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\110843d33fcabf2e6428bfb94c794dca\transformed\window-1.0.0\AndroidManifest.xml:24:5-31:19
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\4d8193744dd97ac9fe2fe9c4806ba67c\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\4d8193744dd97ac9fe2fe9c4806ba67c\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\b61f7f39f910a7dbdb7c45f4f86cdd53\transformed\play-services-basement-18.3.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\b61f7f39f910a7dbdb7c45f4f86cdd53\transformed\play-services-basement-18.3.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.core:core:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8b2f7c68dd0afab8707ba26f25f84f7e\transformed\core-1.13.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8b2f7c68dd0afab8707ba26f25f84f7e\transformed\core-1.13.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\06ba4b33b239ebc769f101a4ffd6353a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\06ba4b33b239ebc769f101a4ffd6353a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\45a8d9a09a528cabc0542eb54c715493\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\45a8d9a09a528cabc0542eb54c715493\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:extractNativeLibs
+		INJECTED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8b2f7c68dd0afab8707ba26f25f84f7e\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:12:9-41
+	android:icon
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:11:9-43
+	android:allowBackup
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:10:9-35
+	android:theme
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:14:9-49
+activity#com.example.waykisafev1.Alerta
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:16:9-18:40
+	android:exported
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:18:13-37
+	android:name
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:17:13-58
+meta-data#com.google.android.geo.API_KEY
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:20:9-22:71
+	android:value
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:22:13-68
+	android:name
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:21:13-58
+activity#com.example.waykisafev1.MapsActivity
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:24:9-26:40
+	android:exported
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:25:13-64
+activity#com.example.waykisafev1.Bienvenido
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:28:9-30:40
+	android:exported
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:29:13-62
+activity#com.example.waykisafev1.Registro
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:32:9-35:56
+	android:exported
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:34:13-37
+	android:theme
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:35:13-53
+	android:name
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:33:13-60
+activity#com.example.waykisafev1.MainActivity
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:37:9-44:20
+	android:exported
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:39:13-36
+	android:name
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:38:13-64
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:40:13-43:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:41:17-69
+	android:name
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:41:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:42:17-77
+	android:name
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml:42:27-74
+uses-sdk
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:8.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\89dd3a8273c68491a1ffe1522a6bde25\transformed\viewbinding-8.1.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\89dd3a8273c68491a1ffe1522a6bde25\transformed\viewbinding-8.1.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d83bcdca3f757ead54da9d3b2e4d1a95\transformed\navigation-common-2.7.5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d83bcdca3f757ead54da9d3b2e4d1a95\transformed\navigation-common-2.7.5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\cd3134c0d5c15488397ebc462ddfb372\transformed\navigation-common-ktx-2.7.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\cd3134c0d5c15488397ebc462ddfb372\transformed\navigation-common-ktx-2.7.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\67472ed58f6183dd2d140769d5a34abf\transformed\navigation-runtime-2.7.5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\67472ed58f6183dd2d140769d5a34abf\transformed\navigation-runtime-2.7.5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\da79d5a5093b9d445d05e5d57ae44627\transformed\navigation-runtime-ktx-2.7.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\da79d5a5093b9d445d05e5d57ae44627\transformed\navigation-runtime-ktx-2.7.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fe357784ca8fd9d446eeda4c0329cd30\transformed\navigation-fragment-2.7.5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fe357784ca8fd9d446eeda4c0329cd30\transformed\navigation-fragment-2.7.5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7010e1e73bbe749ba9e5801a41e0cf13\transformed\navigation-fragment-ktx-2.7.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7010e1e73bbe749ba9e5801a41e0cf13\transformed\navigation-fragment-ktx-2.7.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-ui-ktx:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\71507472a05a9c498dd92ff7757e4650\transformed\navigation-ui-ktx-2.7.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-ui-ktx:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\71507472a05a9c498dd92ff7757e4650\transformed\navigation-ui-ktx-2.7.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-ui:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90241aca31e806c9c65549b92a868722\transformed\navigation-ui-2.7.5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui:2.7.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90241aca31e806c9c65549b92a868722\transformed\navigation-ui-2.7.5\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\0421b6df7f7f0856b5140a5f22b4e13c\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\0421b6df7f7f0856b5140a5f22b4e13c\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:18:5-44
+MERGED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90988ba427b9fc03ddcf28e77b0c9302\transformed\play-services-auth-21.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90988ba427b9fc03ddcf28e77b0c9302\transformed\play-services-auth-21.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d61045f95aecbd088042437a9d138820\transformed\play-services-location-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d61045f95aecbd088042437a9d138820\transformed\play-services-location-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.airbnb.android:lottie:6.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fcc914e9ca90864d31ede8a468d426c4\transformed\lottie-6.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.airbnb.android:lottie:6.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fcc914e9ca90864d31ede8a468d426c4\transformed\lottie-6.1.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\a967ad3a7ce60bef95ed3c9acb6c36b4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\a967ad3a7ce60bef95ed3c9acb6c36b4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\1c5ce4d33c26023c7a91432fc9530287\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\1c5ce4d33c26023c7a91432fc9530287\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\878abf9963edd5f00a7fd9c1ae97c16e\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\878abf9963edd5f00a7fd9c1ae97c16e\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\9dad9ac1e37a8e2d1f27df4a9d331d21\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\9dad9ac1e37a8e2d1f27df4a9d331d21\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\e7fd5e7582ce33e0f2e447388295d7f3\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\e7fd5e7582ce33e0f2e447388295d7f3\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.10] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7b20f11396da71dd800e7b6f9979dba5\transformed\play-services-auth-base-18.0.10\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.10] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7b20f11396da71dd800e7b6f9979dba5\transformed\play-services-auth-base-18.0.10\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f41c5ea713a197c6dfc24018fa587774\transformed\play-services-fido-20.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f41c5ea713a197c6dfc24018fa587774\transformed\play-services-fido-20.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\58412dd14f24fe23bd36266142769be2\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\58412dd14f24fe23bd36266142769be2\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\6f0614cd389264800dd3576c0ae58445\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\6f0614cd389264800dd3576c0ae58445\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\cb496374a742b7d69e82708f0836c683\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\cb496374a742b7d69e82708f0836c683\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\211bb02c447ffd283828ebb0ed6491ed\transformed\recaptcha-18.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\211bb02c447ffd283828ebb0ed6491ed\transformed\recaptcha-18.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d17a657007fa22acaefd3a49f974e272\transformed\integrity-1.2.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d17a657007fa22acaefd3a49f974e272\transformed\integrity-1.2.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fea0a2eb02f6dbfadd82db41e5014199\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fea0a2eb02f6dbfadd82db41e5014199\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f1776ea75176c8081dde206d8671fd31\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f1776ea75176c8081dde206d8671fd31\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:19:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\803f9a574b852e019eb1de46ee444d32\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\803f9a574b852e019eb1de46ee444d32\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\e933421c2ec61e993c93f4abe7807a60\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\e933421c2ec61e993c93f4abe7807a60\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\02da665c611854b2bfb9e5c6ff3dbb53\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\02da665c611854b2bfb9e5c6ff3dbb53\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\9998ed000df0e88ddb10b99928185c9a\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\9998ed000df0e88ddb10b99928185c9a\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3d8fc761820fdf1bbeeb9f79ee7f2313\transformed\loader-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3d8fc761820fdf1bbeeb9f79ee7f2313\transformed\loader-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\766d490c13ea3065a0c7ecbdb9402495\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\766d490c13ea3065a0c7ecbdb9402495\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8e3102c5fc1e4e536675aafcb1b13d0d\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8e3102c5fc1e4e536675aafcb1b13d0d\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\ecf53d6aa64760ff39d158e0260a6ebe\transformed\fragment-ktx-1.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\ecf53d6aa64760ff39d158e0260a6ebe\transformed\fragment-ktx-1.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\76948ea6bef14e0f479477798defee26\transformed\activity-ktx-1.8.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\76948ea6bef14e0f479477798defee26\transformed\activity-ktx-1.8.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\280fb272cf879239166b1cb4b12495e3\transformed\lifecycle-runtime-ktx-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\280fb272cf879239166b1cb4b12495e3\transformed\lifecycle-runtime-ktx-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5d9b9505e8ee72916d233191ad4d543c\transformed\lifecycle-viewmodel-ktx-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5d9b9505e8ee72916d233191ad4d543c\transformed\lifecycle-viewmodel-ktx-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\a3b80178aeece704fe09b51f97f4fb75\transformed\lifecycle-livedata-core-ktx-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\a3b80178aeece704fe09b51f97f4fb75\transformed\lifecycle-livedata-core-ktx-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\602611e31b7d0ab70af092c1c7f79b9a\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\602611e31b7d0ab70af092c1c7f79b9a\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\32a27b41bc761ca829ddd2380e7ca542\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\32a27b41bc761ca829ddd2380e7ca542\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\196aaa2fe2f5fba0c662bfedb10a7637\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\196aaa2fe2f5fba0c662bfedb10a7637\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\e78422d6028fc4de0a8879a9996649eb\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\e78422d6028fc4de0a8879a9996649eb\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d159af6211a4dee26c69acd4cb99df88\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d159af6211a4dee26c69acd4cb99df88\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\13f7f430c0f3160f2c5e108d69566dc8\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\13f7f430c0f3160f2c5e108d69566dc8\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\69bb12521672ef3998f13cac93231a48\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\69bb12521672ef3998f13cac93231a48\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.window:window:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\110843d33fcabf2e6428bfb94c794dca\transformed\window-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\110843d33fcabf2e6428bfb94c794dca\transformed\window-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\4d8193744dd97ac9fe2fe9c4806ba67c\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\4d8193744dd97ac9fe2fe9c4806ba67c\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\b61f7f39f910a7dbdb7c45f4f86cdd53\transformed\play-services-basement-18.3.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\b61f7f39f910a7dbdb7c45f4f86cdd53\transformed\play-services-basement-18.3.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\9cbf3e8e21afa6eec785d71f75d06c7b\transformed\fragment-1.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\9cbf3e8e21afa6eec785d71f75d06c7b\transformed\fragment-1.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\62e61fea310fc48639dc2e663ca11907\transformed\activity-1.8.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\62e61fea310fc48639dc2e663ca11907\transformed\activity-1.8.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f4f1f256702b57f40bd06fd35cf5e156\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f4f1f256702b57f40bd06fd35cf5e156\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\1cfbe1f7adfc1978c67f63e4483dc5be\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\1cfbe1f7adfc1978c67f63e4483dc5be\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\6fa2da992a33dbf2090afdac5de8a0de\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\6fa2da992a33dbf2090afdac5de8a0de\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\a21ff7ec96a7d4051ee147e248d6a2f4\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\a21ff7ec96a7d4051ee147e248d6a2f4\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\746c9bdb5575185bc3f6c44b15e665e1\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\746c9bdb5575185bc3f6c44b15e665e1\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\4542ac3b6891c8b51c197048d12d3996\transformed\core-ktx-1.13.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\4542ac3b6891c8b51c197048d12d3996\transformed\core-ktx-1.13.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\62c3062746eb1d610a2fa83b858b6c5c\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\62c3062746eb1d610a2fa83b858b6c5c\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\eae124296f33d7a589959b6c462da2c6\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\eae124296f33d7a589959b6c462da2c6\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\9f72abc2f0828ff12d173bfb2664a2e8\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\9f72abc2f0828ff12d173bfb2664a2e8\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8b2f7c68dd0afab8707ba26f25f84f7e\transformed\core-1.13.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8b2f7c68dd0afab8707ba26f25f84f7e\transformed\core-1.13.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\4a510b7102427194d8ffd2782196fcc8\transformed\volley-1.2.1\AndroidManifest.xml:5:5-43
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\4a510b7102427194d8ffd2782196fcc8\transformed\volley-1.2.1\AndroidManifest.xml:5:5-43
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\83a81dfaa1b39ca793ac0f70b259f8b2\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\83a81dfaa1b39ca793ac0f70b259f8b2\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5967cbd49ead43d0aa4620aedb3799d3\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5967cbd49ead43d0aa4620aedb3799d3\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\eaea6bdc0838c73a98795c328d7e01b0\transformed\firebase-components-17.1.5\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\eaea6bdc0838c73a98795c328d7e01b0\transformed\firebase-components-17.1.5\AndroidManifest.xml:18:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\cdd749fbbf504e6d93a0ecdb496d44ea\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\cdd749fbbf504e6d93a0ecdb496d44ea\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\06ba4b33b239ebc769f101a4ffd6353a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\06ba4b33b239ebc769f101a4ffd6353a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d4d1e20766473bc78032362377d14b95\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\d4d1e20766473bc78032362377d14b95\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\45a8d9a09a528cabc0542eb54c715493\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\45a8d9a09a528cabc0542eb54c715493\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\881764cba0f37ab58383008fe41021ea\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\881764cba0f37ab58383008fe41021ea\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\dbcef98b81b0ee443ce7408ad83d210f\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\dbcef98b81b0ee443ce7408ad83d210f\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\c64ea74421b9b894fc71db1ec2110e9a\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\c64ea74421b9b894fc71db1ec2110e9a\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\9335a36477ece17ca873f8f0b20d1bd0\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\9335a36477ece17ca873f8f0b20d1bd0\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7e013ef5d94fe071afcb6e6de5c2a3c2\transformed\grpc-android-1.57.2\AndroidManifest.xml:5:5-44
+MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7e013ef5d94fe071afcb6e6de5c2a3c2\transformed\grpc-android-1.57.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\ea08c3d7bddca020637201ee5902367d\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\ea08c3d7bddca020637201ee5902367d\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\36e11a0da6e4e35bb0b758381be2fcd2\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\36e11a0da6e4e35bb0b758381be2fcd2\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:23:9-61
+	android:targetSdkVersion
+		INJECTED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Lenovo\AndroidStudioProjects\WaykiSafev1\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\211bb02c447ffd283828ebb0ed6491ed\transformed\recaptcha-18.4.0\AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\211bb02c447ffd283828ebb0ed6491ed\transformed\recaptcha-18.4.0\AndroidManifest.xml:8:5-79
+MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7e013ef5d94fe071afcb6e6de5c2a3c2\transformed\grpc-android-1.57.2\AndroidManifest.xml:7:5-79
+MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7e013ef5d94fe071afcb6e6de5c2a3c2\transformed\grpc-android-1.57.2\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:26:22-76
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:29:9-46:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:31:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:33:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:32:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:34:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:30:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:35:13-45:29
+action#android.intent.action.VIEW
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
+data
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
+	android:path
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
+	android:host
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
+	android:scheme
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:47:9-64:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:49:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:51:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:50:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:52:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:48:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:53:13-63:29
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:26:9-35:19
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:26:9-35:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f1776ea75176c8081dde206d8671fd31\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f1776ea75176c8081dde206d8671fd31\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:30:9-38:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:68:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:34:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:32:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:67:13-84
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:69:13-71:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:71:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\fd89b7cb4a3bc7b8f69363b61ba1d908\transformed\firebase-auth-22.3.1\AndroidManifest.xml:70:17-109
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar
+ADDED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:18:17-122
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:24.10.3] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\5ca21e1c2915803c2cdb37f7d5f133b2\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:21:17-111
+meta-data#com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar
+ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:29:13-31:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:31:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:30:17-120
+meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
+ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3bc917d75d9955b55a03c6f108692b5f\transformed\firebase-database-20.3.1\AndroidManifest.xml:33:17-109
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90988ba427b9fc03ddcf28e77b0c9302\transformed\play-services-auth-21.0.0\AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90988ba427b9fc03ddcf28e77b0c9302\transformed\play-services-auth-21.0.0\AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90988ba427b9fc03ddcf28e77b0c9302\transformed\play-services-auth-21.0.0\AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90988ba427b9fc03ddcf28e77b0c9302\transformed\play-services-auth-21.0.0\AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90988ba427b9fc03ddcf28e77b0c9302\transformed\play-services-auth-21.0.0\AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90988ba427b9fc03ddcf28e77b0c9302\transformed\play-services-auth-21.0.0\AndroidManifest.xml:33:9-37:51
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90988ba427b9fc03ddcf28e77b0c9302\transformed\play-services-auth-21.0.0\AndroidManifest.xml:35:13-36
+	android:visibleToInstantApps
+		ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90988ba427b9fc03ddcf28e77b0c9302\transformed\play-services-auth-21.0.0\AndroidManifest.xml:37:13-48
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90988ba427b9fc03ddcf28e77b0c9302\transformed\play-services-auth-21.0.0\AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\90988ba427b9fc03ddcf28e77b0c9302\transformed\play-services-auth-21.0.0\AndroidManifest.xml:34:13-89
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:28:9-32
+queries
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:30:5-34:15
+package#com.google.android.apps.maps
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:33:9-64
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:33:18-61
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:39:9-41:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:41:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\10f5c419dc5a6779d0819209f49ff7de\transformed\play-services-maps-18.2.0\AndroidManifest.xml:40:13-50
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\cb496374a742b7d69e82708f0836c683\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\cb496374a742b7d69e82708f0836c683\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\cb496374a742b7d69e82708f0836c683\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\cb496374a742b7d69e82708f0836c683\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\211bb02c447ffd283828ebb0ed6491ed\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:5-98
+	android:name
+		ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\211bb02c447ffd283828ebb0ed6491ed\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:22-95
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f1776ea75176c8081dde206d8671fd31\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f1776ea75176c8081dde206d8671fd31\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\f1776ea75176c8081dde206d8671fd31\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:13:17-116
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:23:9-28:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:25:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:27:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:26:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:24:13-77
+meta-data#com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar
+ADDED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:35:13-37:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:37:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\3277305ef8018f96cf6c60969baee27d\transformed\firebase-common-20.4.2\AndroidManifest.xml:36:17-109
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8e3102c5fc1e4e536675aafcb1b13d0d\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\32a27b41bc761ca829ddd2380e7ca542\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\32a27b41bc761ca829ddd2380e7ca542\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\06ba4b33b239ebc769f101a4ffd6353a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\06ba4b33b239ebc769f101a4ffd6353a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8e3102c5fc1e4e536675aafcb1b13d0d\transformed\emoji2-1.3.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8e3102c5fc1e4e536675aafcb1b13d0d\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8e3102c5fc1e4e536675aafcb1b13d0d\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8e3102c5fc1e4e536675aafcb1b13d0d\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8e3102c5fc1e4e536675aafcb1b13d0d\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8e3102c5fc1e4e536675aafcb1b13d0d\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8e3102c5fc1e4e536675aafcb1b13d0d\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\32a27b41bc761ca829ddd2380e7ca542\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\32a27b41bc761ca829ddd2380e7ca542\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\32a27b41bc761ca829ddd2380e7ca542\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\110843d33fcabf2e6428bfb94c794dca\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\110843d33fcabf2e6428bfb94c794dca\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\110843d33fcabf2e6428bfb94c794dca\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\110843d33fcabf2e6428bfb94c794dca\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\110843d33fcabf2e6428bfb94c794dca\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\110843d33fcabf2e6428bfb94c794dca\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\b61f7f39f910a7dbdb7c45f4f86cdd53\transformed\play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\b61f7f39f910a7dbdb7c45f4f86cdd53\transformed\play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\b61f7f39f910a7dbdb7c45f4f86cdd53\transformed\play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8b2f7c68dd0afab8707ba26f25f84f7e\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8b2f7c68dd0afab8707ba26f25f84f7e\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8b2f7c68dd0afab8707ba26f25f84f7e\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+permission#com.example.waykisafev1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8b2f7c68dd0afab8707ba26f25f84f7e\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8b2f7c68dd0afab8707ba26f25f84f7e\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8b2f7c68dd0afab8707ba26f25f84f7e\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8b2f7c68dd0afab8707ba26f25f84f7e\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8b2f7c68dd0afab8707ba26f25f84f7e\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+uses-permission#com.example.waykisafev1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8b2f7c68dd0afab8707ba26f25f84f7e\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.0] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\8b2f7c68dd0afab8707ba26f25f84f7e\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\AndroidStudioProjects\Waykisafe\.gradle\8.11.1\caches\8.13\transforms\7fe042346865090c20fb8f716b1e0d81\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92

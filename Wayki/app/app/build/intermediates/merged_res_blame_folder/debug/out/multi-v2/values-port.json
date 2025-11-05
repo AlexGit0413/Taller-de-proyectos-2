@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.waykisafev1.app-mergeDebugResources-3:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Lenovo\\AndroidStudioProjects\\Waykisafe\\.gradle\\8.11.1\\caches\\8.13\\transforms\\878abf9963edd5f00a7fd9c1ae97c16e\\transformed\\appcompat-1.7.0\\res\\values-port\\values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}
