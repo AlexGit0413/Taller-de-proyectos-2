@@ -2,8 +2,13 @@ package com.example.waykisfe;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -23,12 +28,17 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Reporte extends AppCompatActivity {
+public class Reporte extends AppCompatActivity implements SensorEventListener {
 
     private FusedLocationProviderClient fusedLocationClient;
     private FirebaseFirestore firestore;
     private FirebaseAuth auth;
     private static final String NUMERO_AUTORIDAD = "105"; // 📞 Policía Nacional del Perú
+
+    private SensorManager sensorManager;
+    private float aceleracionActual;
+    private float ultimaAceleracion;
+    private float sacudida; // Detecta la fuerza del movimiento
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +49,16 @@ public class Reporte extends AppCompatActivity {
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         firestore = FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
+
+        // Inicializar sensor de movimiento
+        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        sensorManager.registerListener(this,
+                sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+                SensorManager.SENSOR_DELAY_NORMAL);
+
+        aceleracionActual = SensorManager.GRAVITY_EARTH;
+        ultimaAceleracion = SensorManager.GRAVITY_EARTH;
+        sacudida = 0.00f;
 
         // 🚀 Al iniciar: envía ubicación + datos personales
         enviarUbicacionYDatos();
@@ -85,7 +105,7 @@ public class Reporte extends AppCompatActivity {
                     .addOnSuccessListener(doc -> {
                         Toast.makeText(this, "✅ Ubicación y datos enviados automáticamente", Toast.LENGTH_SHORT).show();
 
-                        // Después de enviar, activar opciones de emergencia
+                        // Luego de enviar, activar opciones de emergencia
                         realizarLlamadaEmergencia();
                         enviarMensajeEmergencia(lat, lng);
                     })
@@ -94,7 +114,7 @@ public class Reporte extends AppCompatActivity {
         });
     }
 
-    // 🔹 6.1.3 Configurar opción de llamada automática a autoridades
+    // 🔹 6.1.3 Llamada automática a autoridades
     private void realizarLlamadaEmergencia() {
         Intent intent = new Intent(Intent.ACTION_CALL);
         intent.setData(Uri.parse("tel:" + NUMERO_AUTORIDAD));
@@ -110,7 +130,7 @@ public class Reporte extends AppCompatActivity {
         Toast.makeText(this, "📞 Llamando a las autoridades...", Toast.LENGTH_SHORT).show();
     }
 
-    // 🔹 6.1.3 Envío automático de mensaje SMS a autoridades
+    // 🔹 6.1.3 Envío automático de mensaje SMS con ubicación
     private void enviarMensajeEmergencia(double lat, double lng) {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -125,5 +145,43 @@ public class Reporte extends AppCompatActivity {
         smsManager.sendTextMessage(NUMERO_AUTORIDAD, null, mensaje, null, null);
 
         Toast.makeText(this, "📩 Mensaje enviado a autoridades", Toast.LENGTH_SHORT).show();
+    }
+
+    // 🔹 6.1.4 Activar envío por agitar el dispositivo
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        float x = event.values[0];
+        float y = event.values[1];
+        float z = event.values[2];
+
+        ultimaAceleracion = aceleracionActual;
+        aceleracionActual = (float) Math.sqrt((x * x + y * y + z * z));
+        float delta = aceleracionActual - ultimaAceleracion;
+        sacudida = sacudida * 0.9f + delta;
+
+        // Si el movimiento supera cierto umbral, activar alerta
+        if (sacudida > 12) { // puedes ajustar la sensibilidad
+            Toast.makeText(this, "🚨 Agitación detectada, enviando alerta...", Toast.LENGTH_SHORT).show();
+            enviarUbicacionYDatos();
+        }
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        // No necesario en este caso
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        sensorManager.registerListener(this,
+                sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+                SensorManager.SENSOR_DELAY_NORMAL);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        sensorManager.unregisterListener(this);
     }
 }
