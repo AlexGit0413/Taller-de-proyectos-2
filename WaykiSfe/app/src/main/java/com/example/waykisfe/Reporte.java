@@ -2,7 +2,6 @@ package com.example.waykisfe;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Sensor;
@@ -12,8 +11,13 @@ import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.telephony.SmsManager;
+import android.widget.Button;
 import android.widget.Toast;
+import android.provider.ContactsContract;
+import android.database.Cursor;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -33,38 +37,61 @@ public class Reporte extends AppCompatActivity implements SensorEventListener {
     private FusedLocationProviderClient fusedLocationClient;
     private FirebaseFirestore firestore;
     private FirebaseAuth auth;
-    private static final String NUMERO_AUTORIDAD = "105"; // 📞 Policía Nacional del Perú
-
     private SensorManager sensorManager;
-    private float aceleracionActual;
-    private float ultimaAceleracion;
-    private float sacudida; // Detecta la fuerza del movimiento
+    private long lastShakeTime = 0;
+    private static final int SHAKE_THRESHOLD = 800;
+    private static final String NUMERO_AUTORIDAD = "105"; // Policía Nacional del Perú
+    private String contactoEmergencia = null;
+
+    private ActivityResultLauncher<Intent> pickContactLauncher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporte);
 
-        // Inicializar servicios
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         firestore = FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
+        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 
-        // Inicializar sensor de movimiento
-        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        sensorManager.registerListener(this,
-                sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
-                SensorManager.SENSOR_DELAY_NORMAL);
+        // Selección de contacto de emergencia
+        pickContactLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    if (result.getData() != null) {
+                        Uri contactData = result.getData().getData();
+                        Cursor cursor = getContentResolver().query(contactData, null, null, null, null);
+                        if (cursor != null && cursor.moveToFirst()) {
+                            int phoneIndex = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+                            contactoEmergencia = cursor.getString(phoneIndex);
+                            cursor.close();
+                            Toast.makeText(this, "📱 Contacto guardado: " + contactoEmergencia, Toast.LENGTH_LONG).show();
+                        }
+                    }
+                }
+        );
 
-        aceleracionActual = SensorManager.GRAVITY_EARTH;
-        ultimaAceleracion = SensorManager.GRAVITY_EARTH;
-        sacudida = 0.00f;
+        Button btnEnviar = findViewById(R.id.btnEnviar);
+        btnEnviar.setOnClickListener(v -> enviarUbicacionYDatos());
 
-        // 🚀 Al iniciar: envía ubicación + datos personales
+        // 🚀 Activar envío automático al iniciar
         enviarUbicacionYDatos();
+
+        // 🔹 Botón para elegir contacto de emergencia
+        btnEnviar.setOnLongClickListener(v -> {
+            seleccionarContactoEmergencia();
+            return true;
+        });
     }
 
-    // 🔹 6.1.2 Implementar envío automático de ubicación y datos personales
+    // ✅ Permitir seleccionar contacto
+    private void seleccionarContactoEmergencia() {
+        Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
+        pickContactLauncher.launch(intent);
+    }
+
+    // ✅ Enviar ubicación y datos personales
     @SuppressLint("MissingPermission")
     private void enviarUbicacionYDatos() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
@@ -91,7 +118,6 @@ public class Reporte extends AppCompatActivity implements SensorEventListener {
             double lat = location.getLatitude();
             double lng = location.getLongitude();
 
-            // Guardar ubicación y datos personales en Firebase
             Map<String, Object> datos = new HashMap<>();
             datos.put("nombre_usuario", user.getDisplayName() != null ? user.getDisplayName() : "Sin nombre");
             datos.put("correo_usuario", user.getEmail());
@@ -103,18 +129,15 @@ public class Reporte extends AppCompatActivity implements SensorEventListener {
             firestore.collection("ubicaciones_usuarios")
                     .add(datos)
                     .addOnSuccessListener(doc -> {
-                        Toast.makeText(this, "✅ Ubicación y datos enviados automáticamente", Toast.LENGTH_SHORT).show();
-
-                        // Luego de enviar, activar opciones de emergencia
+                        Toast.makeText(this, "✅ Datos enviados", Toast.LENGTH_SHORT).show();
                         realizarLlamadaEmergencia();
                         enviarMensajeEmergencia(lat, lng);
                     })
-                    .addOnFailureListener(e ->
-                            Toast.makeText(this, "❌ Error: " + e.getMessage(), Toast.LENGTH_SHORT).show());
+                    .addOnFailureListener(e -> Toast.makeText(this, "❌ Error: " + e.getMessage(), Toast.LENGTH_SHORT).show());
         });
     }
 
-    // 🔹 6.1.3 Llamada automática a autoridades
+    // 📞 Llamada automática
     private void realizarLlamadaEmergencia() {
         Intent intent = new Intent(Intent.ACTION_CALL);
         intent.setData(Uri.parse("tel:" + NUMERO_AUTORIDAD));
@@ -127,10 +150,10 @@ public class Reporte extends AppCompatActivity implements SensorEventListener {
         }
 
         startActivity(intent);
-        Toast.makeText(this, "📞 Llamando a las autoridades...", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "📞 Llamando a autoridades...", Toast.LENGTH_SHORT).show();
     }
 
-    // 🔹 6.1.3 Envío automático de mensaje SMS con ubicación
+    // 💬 Enviar SMS automático a autoridades o contacto
     private void enviarMensajeEmergencia(double lat, double lng) {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -139,37 +162,42 @@ public class Reporte extends AppCompatActivity implements SensorEventListener {
             return;
         }
 
-        String mensaje = "⚠️ Emergencia detectada.\nUbicación aproximada:\nLat: " + lat + "\nLng: " + lng;
+        String mensaje = "⚠️ Emergencia detectada.\nUbicación:\nLat: " + lat + "\nLng: " + lng;
 
         SmsManager smsManager = SmsManager.getDefault();
+        // Envía tanto a autoridades como al contacto seleccionado
         smsManager.sendTextMessage(NUMERO_AUTORIDAD, null, mensaje, null, null);
+        if (contactoEmergencia != null) {
+            smsManager.sendTextMessage(contactoEmergencia, null, mensaje, null, null);
+        }
 
-        Toast.makeText(this, "📩 Mensaje enviado a autoridades", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "📩 Mensaje enviado a autoridades y contacto", Toast.LENGTH_SHORT).show();
     }
 
-    // 🔹 6.1.4 Activar envío por agitar el dispositivo
+    // 🚨 Activación por agitar el dispositivo
     @Override
     public void onSensorChanged(SensorEvent event) {
-        float x = event.values[0];
-        float y = event.values[1];
-        float z = event.values[2];
+        if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+            long currentTime = System.currentTimeMillis();
 
-        ultimaAceleracion = aceleracionActual;
-        aceleracionActual = (float) Math.sqrt((x * x + y * y + z * z));
-        float delta = aceleracionActual - ultimaAceleracion;
-        sacudida = sacudida * 0.9f + delta;
+            if ((currentTime - lastShakeTime) > 1000) {
+                float x = event.values[0];
+                float y = event.values[1];
+                float z = event.values[2];
 
-        // Si el movimiento supera cierto umbral, activar alerta
-        if (sacudida > 12) { // puedes ajustar la sensibilidad
-            Toast.makeText(this, "🚨 Agitación detectada, enviando alerta...", Toast.LENGTH_SHORT).show();
-            enviarUbicacionYDatos();
+                double acceleration = Math.sqrt(x * x + y * y + z * z) - SensorManager.GRAVITY_EARTH;
+
+                if (acceleration > 15) { // umbral del "shake"
+                    lastShakeTime = currentTime;
+                    Toast.makeText(this, "🚨 Dispositivo agitado - Enviando reporte", Toast.LENGTH_SHORT).show();
+                    enviarUbicacionYDatos();
+                }
+            }
         }
     }
 
     @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
-        // No necesario en este caso
-    }
+    public void onAccuracyChanged(Sensor sensor, int accuracy) { }
 
     @Override
     protected void onResume() {
