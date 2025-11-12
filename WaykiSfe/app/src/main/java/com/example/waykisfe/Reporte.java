@@ -2,19 +2,21 @@ package com.example.waykisfe;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.telephony.SmsManager;
 import android.widget.Button;
 import android.widget.Toast;
-import android.provider.ContactsContract;
-import android.database.Cursor;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -39,7 +41,6 @@ public class Reporte extends AppCompatActivity implements SensorEventListener {
     private FirebaseAuth auth;
     private SensorManager sensorManager;
     private long lastShakeTime = 0;
-    private static final int SHAKE_THRESHOLD = 800;
     private static final String NUMERO_AUTORIDAD = "105"; // Policía Nacional del Perú
     private String contactoEmergencia = null;
 
@@ -73,19 +74,33 @@ public class Reporte extends AppCompatActivity implements SensorEventListener {
         );
 
         Button btnEnviar = findViewById(R.id.btnEnviar);
-        btnEnviar.setOnClickListener(v -> enviarUbicacionYDatos());
+        btnEnviar.setOnClickListener(v -> mostrarConfirmacionEnvio());
 
-        // 🚀 Activar envío automático al iniciar
-        enviarUbicacionYDatos();
-
-        // 🔹 Botón para elegir contacto de emergencia
+        // 🔹 Mantener presionado para elegir contacto de emergencia
         btnEnviar.setOnLongClickListener(v -> {
             seleccionarContactoEmergencia();
             return true;
         });
     }
 
-    // ✅ Permitir seleccionar contacto
+    // ✅ Pantalla de confirmación antes del envío
+    private void mostrarConfirmacionEnvio() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Confirmar envío de alerta 🚨");
+        builder.setMessage("¿Deseas enviar tu ubicación y datos personales a las autoridades y a tu contacto de emergencia?");
+        builder.setCancelable(false);
+
+        builder.setPositiveButton("Sí, enviar", (dialog, which) -> enviarUbicacionYDatos());
+        builder.setNegativeButton("Cancelar", (dialog, which) -> {
+            Toast.makeText(this, "❎ Envío cancelado", Toast.LENGTH_SHORT).show();
+            dialog.dismiss();
+        });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+    // ✅ Seleccionar contacto
     private void seleccionarContactoEmergencia() {
         Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
         pickContactLauncher.launch(intent);
@@ -165,7 +180,6 @@ public class Reporte extends AppCompatActivity implements SensorEventListener {
         String mensaje = "⚠️ Emergencia detectada.\nUbicación:\nLat: " + lat + "\nLng: " + lng;
 
         SmsManager smsManager = SmsManager.getDefault();
-        // Envía tanto a autoridades como al contacto seleccionado
         smsManager.sendTextMessage(NUMERO_AUTORIDAD, null, mensaje, null, null);
         if (contactoEmergencia != null) {
             smsManager.sendTextMessage(contactoEmergencia, null, mensaje, null, null);
@@ -187,17 +201,17 @@ public class Reporte extends AppCompatActivity implements SensorEventListener {
 
                 double acceleration = Math.sqrt(x * x + y * y + z * z) - SensorManager.GRAVITY_EARTH;
 
-                if (acceleration > 15) { // umbral del "shake"
+                if (acceleration > 15) {
                     lastShakeTime = currentTime;
-                    Toast.makeText(this, "🚨 Dispositivo agitado - Enviando reporte", Toast.LENGTH_SHORT).show();
-                    enviarUbicacionYDatos();
+                    Toast.makeText(this, "🚨 Dispositivo agitado - Enviando alerta", Toast.LENGTH_SHORT).show();
+                    mostrarConfirmacionEnvio();
                 }
             }
         }
     }
 
     @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) { }
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {}
 
     @Override
     protected void onResume() {
