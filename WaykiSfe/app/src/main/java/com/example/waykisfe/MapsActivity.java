@@ -39,6 +39,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private FirebaseFirestore firestore;
     private DatabaseReference realtimeDatabase;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
+    private final Map<String, Marker> marcadoresActuales = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,14 +64,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             startActivity(intent);
         });
 
-        // Escuchar cambios en Realtime Database y actualizar el mapa en tiempo real
+        // 🔥 Escuchar cambios en Realtime Database y actualizar el mapa sin limpiar todo
         realtimeDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (mMap == null) return;
 
-                mMap.clear();
-                cargarZonasPeligrosas(); // Mantener zonas de usuarios
                 for (DataSnapshot data : snapshot.getChildren()) {
                     Map<String, Object> reporte = (Map<String, Object>) data.getValue();
                     if (reporte == null) continue;
@@ -78,26 +77,40 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     Double lat = (Double) reporte.get("latitud");
                     Double lng = (Double) reporte.get("longitud");
                     String nivel = (String) reporte.get("nivel_peligro");
+
                     if (lat == null || lng == null || nivel == null) continue;
 
+                    String idReporte = data.getKey();
                     LatLng ubicacion = new LatLng(lat, lng);
+
+                    // Si ya existe el marcador, no lo duplicamos
+                    if (marcadoresActuales.containsKey(idReporte)) continue;
+
                     int colorStroke = nivel.equalsIgnoreCase("Naranja") ? Color.rgb(255, 165, 0) : Color.RED;
                     int colorFill = nivel.equalsIgnoreCase("Naranja") ? 0x44FFA500 : 0x44FF0000;
 
+                    // Añadimos el círculo visual del nivel de peligro
                     mMap.addCircle(new CircleOptions()
                             .center(ubicacion)
                             .radius(8)
                             .strokeColor(colorStroke)
                             .fillColor(colorFill));
 
-                    mMap.addMarker(new MarkerOptions()
+                    // Añadimos marcador con ícono personalizado
+                    Marker marcador = mMap.addMarker(new MarkerOptions()
                             .position(ubicacion)
-                            .title("[Reporte Automático]")
+                            .title("[Nuevo Reporte Automático]")
                             .snippet("Nivel: " + nivel)
                             .icon(BitmapDescriptorFactory.fromBitmap(
                                     Bitmap.createScaledBitmap(
                                             BitmapFactory.decodeResource(getResources(), R.drawable.ia),
                                             50, 50, false))));
+
+                    marcadoresActuales.put(idReporte, marcador);
+
+                    // 🔔 Aviso visual y notificación breve
+                    Toast.makeText(MapsActivity.this, "Nuevo reporte detectado: " + nivel, Toast.LENGTH_SHORT).show();
+                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ubicacion, 18f));
                 }
             }
 
@@ -175,7 +188,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         float distance = userLoc.distanceTo(zoneLoc);
 
                         if (distance < RADIUS) {
-                            Toast.makeText(MapsActivity.this, "¡Estás ingresando a una zona peligrosa! Se registrará automáticamente el incidente.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(MapsActivity.this, "¡Zona peligrosa detectada! Se registrará automáticamente.", Toast.LENGTH_LONG).show();
 
                             Map<String, Object> incidente = new HashMap<>();
                             incidente.put("latitud", userLocation.latitude);
@@ -184,13 +197,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             incidente.put("timestamp", System.currentTimeMillis());
                             incidente.put("tipo", "Automático");
 
-                            // Guardar en Firestore
                             firestore.collection("reportes_automaticos")
                                     .add(incidente)
-                                    .addOnSuccessListener(docRef -> Toast.makeText(this, "Incidente registrado automáticamente en Firestore", Toast.LENGTH_SHORT).show())
+                                    .addOnSuccessListener(docRef -> Toast.makeText(this, "Incidente registrado en Firestore", Toast.LENGTH_SHORT).show())
                                     .addOnFailureListener(e -> Toast.makeText(this, "Error al registrar incidente: " + e.getMessage(), Toast.LENGTH_SHORT).show());
 
-                            // Guardar en Realtime Database
                             realtimeDatabase.push().setValue(incidente)
                                     .addOnSuccessListener(aVoid -> Toast.makeText(this, "Incidente guardado en Realtime Database", Toast.LENGTH_SHORT).show())
                                     .addOnFailureListener(e -> Toast.makeText(this, "Error al guardar en Realtime Database: " + e.getMessage(), Toast.LENGTH_SHORT).show());
